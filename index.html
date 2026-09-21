@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>बारूडीह | आधिकारिक वेबसाइट</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/css.css">
+
+    <!-- Slider Images Preloading (ताकि फोटो तुरंत लोड हों) -->
+    <link rel="preload" as="image" href="image/vill.jpeg">
+    <link rel="preload" as="image" href="image/group_image.jpeg">
+    <link rel="preload" as="image" href="image/barad.jpeg">
+
+    <!-- Google Translate Script -->
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'hi',
+            includedLanguages: 'hi,en,bn,or,ta,te,gu,mr,pa,ur',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+</head>
+
+<body>
+
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+        <h1>🙏 जय गांव गाराम 🙏</h1>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>🌍 बारूडीह 🌍</h1>
+        <p>ग्राम की आस्था • हमारी संस्कृति • हमारी पहचान</p>
+    </header>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="main-nav">
+        <!-- Desktop Nav Links -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#religious-places">Religious Places</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Controls (Dark Mode, Translate, Menu) -->
+        <div class="nav-right">
+            <button id="darkBtn" class="nav-icon-btn" aria-label="Toggle Dark Mode">🌙</button>
+            <div id="google_translate_element"></div>
+            <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+
+        <a href="index.html">Home</a>
+
+        <!-- Submenu Section (ABOUT) -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">About <span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                <a href="barudih_ke_bare.html" target="_blank">बारूडीह के बारे</a>
+                <a href="sub1.html" target="_blank">बारूडीह का नक्शा</a>
+            </div>
+        </div>
+
+        <!-- Submenu Section (RELIGIOUS PLACES) -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">Religious Places <span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                <a href="gram.html" target="_blank">Gram Than</a>
+                <a href="hari.html" target="_blank">Hari Mandir</a>
+                <a href="hanuman.html" target="_blank">Hanuman Mandir</a>
+                <a href="sarswati.html" target="_blank">Sarswati Puja</a>
+            </div>
+        </div>
+
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <div class="hero" style="background-image: url('image/vill.jpeg');">
+        <div class="hero-content">
+            <h2>🙏 बारूडीह में आपका स्वागत है 🙏</h2>
+            <p><b>हमारे गाँव की संस्कृति, परंपरा, इतिहास और धार्मिक धरोहर को समर्पित आधिकारिक वेबसाइट।</b></p>
+        </div>
+    </div>
+
+    <!-- ================= IMAGE SLIDER ================= -->
+    <section class="section">
+        <h2>📸 बारूडीह फोटो गैलरी</h2>
+        <div class="slider">
+            <img id="slide" src="image/vill.jpeg" alt="Barudih Village" loading="eager" decoding="async">
+        </div>
+    </section>
+
+    <!-- ================= HISTORY / ABOUT ================= -->
+    <section class="section history-box" id="about">
+        <h2><span>🏕️</span> बारूडीह के बारे में</h2>
+
+        <p> 
+        भारत गाँवों का देश है। हमारे गाँवों में प्रकृति की सुंदरता के साथ-साथ अपनी संस्कृति, परंपराएँ और धार्मिक मान्यताएँ भी देखने को मिलती हैं। मेरा गाँव बारूडीह है। मेरा गाँव झारखंड की ग्रामीण संस्कृति और पंचपरगना क्षेत्र की परंपराओं से जुड़ा हुआ है। मुझे अपने गाँव की प्राकृतिक सुंदरता, संस्कृति, त्योहार और यहाँ के लोगों का आपसी प्रेम बहुत पसंद है।
+        </p>
+        <br>
+        <p>
+        मेरे गाँव का वातावरण शांत और प्राकृतिक है। चारों ओर खेत, पेड़-पौधे और हरियाली दिखाई देती है। गाँव के लोग मेहनती और सरल स्वभाव के हैं। यहाँ लोग खेती, मजदूरी, पशुपालन तथा अन्य छोटे-मोटे काम करके अपना जीवन चलाते हैं। गाँव में लोगों के बीच आपसी सहयोग और भाईचारे की भावना देखने को मिलती है। किसी के घर में खुशी का अवसर हो या कोई परेशानी, लोग एक-दूसरे के साथ खड़े रहते हैं।
+        <button id="seeMore" onclick="showHistory()" style="margin-left: 10px; cursor: pointer;"> और पढ़े... </button>
+        </p>
+
+        <!-- Hidden Section -->
+        <div id="history" style="display:none;">
+            <br>
+            <p>मेरे गाँव की धार्मिक पहचान भी बहुत महत्वपूर्ण है। गाँव में ग्राम देवता, हरि मंदिर और हनुमान मंदिर स्थित हैं। इन मंदिरों में गाँव के लोगों की गहरी आस्था है।</p>
+            <br>
+            <p>मेरे गाँव में सरस्वती पूजा हर साल बड़े उत्साह के साथ मनाई जाती है। बच्चे और युवा माँ सरस्वती के दरबार को सजाने में बढ़-चढ़कर हिस्सा लेते हैं।</p>
+            <br>
+            <p>हमारे गाँव में दीपावली भी बड़े धूमधाम से मनाई जाती है। दीये जलाए जाते हैं और जाहली की विशेष परंपरा गाँव की रात को खास बनाती है।</p>
+            <br>
+            <p>मेरे गाँव की एक विशेष सांस्कृतिक पहचान रासलीला है। यह परंपरा वर्षों से चली आ रही है जो पूरे गाँव को भक्तिमय बना देती है।</p>
+            <br>
+            <p>इसके साथ ही नर्तकी नाच और झूमर जैसे लोकनृत्य भी हमारी ग्रामीण विरासत को जीवित रखते हैं।</p>
+            <br>
+            <p>झारखंड की संस्कृति में करम, सरहुल और अन्य त्योहार प्रकृति के प्रति प्रेम और आभार का संदेश देते हैं।</p>
+            <br>
+            <p>गाँव के बच्चों और युवाओं में खेल-कूद के प्रति भी काफी उत्साह रहता है। मैदानों में कबड्डी, क्रिकेट और फुटबॉल के मैच होते हैं।</p>
+            <br>
+            <p>
+            मेरा गाँव मेरे लिए केवल एक रहने की जगह नहीं है, बल्कि मेरी पहचान, संस्कृति और भावनाओं से जुड़ा हुआ स्थान है।
+            <button id="seeLess" onclick="hideHistory()" style="display:none; cursor: pointer; padding: 5px 15px;">See Less</button>
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= RELIGIOUS PLACES ================= -->
+    <section class="section" id="religious-places">
+        <h2>प्रमुख धार्मिक स्थल</h2>
+
+        <div class="cards">
+            <a href="gram.html" target="_blank" class="card-link">
+                <div class="card"><h3>ग्राम थान</h3></div>
+            </a>
+
+            <a href="hari.html" target="_blank" class="card-link">
+                <div class="card"><h4>हरि मन्दिर</h4></div>
+            </a>
+
+            <a href="hanuman.html" target="_blank" class="card-link">
+                <div class="card"><h5>हनुमान मंदिर</h5></div>
+            </a>
+
+            <a href="sarswati.html" target="_blank" class="card-link">
+                <div class="card"><h3>सरस्वती पूजा</h3></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= GOOGLE MAP ================= -->
+    <section class="section">
+        <h2>📍 बारूडीह का स्थान</h2>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14661.765931844782!2d85.72747008315764!3d23.26089432778569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5adba47cef64d%3A0x15950bf15c2b96ff!2sTorang%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1788634093886!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+        <h2>📞 संपर्क करें</h2>
+        <form action="https://formsubmit.co/mahtoanuj965@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://formsubmit.co/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="text" name="name" placeholder="आपका नाम" required>
+            <input type="email" name="email" placeholder="ईमेल">
+            <input type="tel" name="phone" placeholder="मोबाइल नंबर" required>
+            <textarea name="message" placeholder="अपना संदेश लिखें..." required></textarea>
+
+            <button type="submit">संदेश भेजें</button>
+        </form>
+    </section>
+
+    <!-- ================= FLOATING BUTTONS ================= -->
+    <a href="https://wa.me/7368937144" class="whatsapp" target="_blank" aria-label="Contact on WhatsApp">💬</a>
+    <button id="topBtn" aria-label="Scroll to Top">⬆</button>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <h2>🚩 बारूडीह 🚩</h2>
+        <p>आस्था • संस्कृति • एकता • विकास</p>
+        <hr>
+        <p>© 2026 बारूडीह। सभी अधिकार सुरक्षित।</p>
+        <p>इस वेबसाइट की सामग्री, फोटो एवं डिज़ाइन बिना अनुमति कॉपी करना प्रतिबंधित है।</p>
+        <p>💻 Website Designed & Developed by <strong>Mahto Anuj Kumar</strong></p>
+        <p>📧 Email : mahtoanuj965@gmail.com</p>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+    // 1. Mobile Menu Toggle
+    function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("active");
+    }
+
+    // 2. Mobile Accordion Submenu
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('.menu-item').forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                let container = this.parentElement;
+                container.classList.toggle('active');
+            });
+        });
+    });
+
+    // 3. Read More / See Less Toggle
+    function showHistory() {
+        document.getElementById("history").style.display = "block";
+        document.getElementById("seeMore").style.display = "none";
+        document.getElementById("seeLess").style.display = "inline-block";
+    }
+
+    function hideHistory() {
+        document.getElementById("history").style.display = "none";
+        document.getElementById("seeLess").style.display = "none";
+        document.getElementById("seeMore").style.display = "inline-block";
+        document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 4. Optimized Image Slider (Preloading added to fix slow loading)
+    let images = [
+        "vill.jpeg",
+        "group_image.jpeg",
+        "barad.jpeg",
+        "baead1.jpeg",
+        "vill1.jpeg",
+        "barad2.jpeg",
+        "bhidka.jpeg",
+        "index2.jpeg"
+    ];
+
+    // Background Image Cache Engine
+    let preloadedImages = [];
+    images.forEach(function(src) {
+        let img = new Image();
+        img.src = src;
+        preloadedImages.push(img);
+    });
+
+    let i = 0;
+    setInterval(function(){
+        i = (i + 1) % images.length;
+        let slideImg = document.getElementById("slide");
+        if(slideImg) {
+            slideImg.src = images[i];
+        }
+    }, 3000);
+
+    // 5. Dark Mode Toggle
+    let darkBtn = document.getElementById("darkBtn");
+    if(darkBtn) {
+        darkBtn.onclick = function(){
+            document.body.classList.toggle("dark");
+        };
+    }
+
+    // 6. Back To Top Button
+    let topBtn = document.getElementById("topBtn");
+    window.onscroll = function(){
+        if(document.documentElement.scrollTop > 200 || document.body.scrollTop > 200){
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    topBtn.onclick = function(){
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // 7. Hide Loader
+    window.onload = function(){
+        setTimeout(function(){
+            let loader = document.getElementById("loader");
+            if(loader) {
+                loader.style.display = "none";
+            }
+        }, 1200);
+    };
+    </script>
+
+</body>
+</html>

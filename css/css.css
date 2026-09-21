@@ -1,0 +1,735 @@
+/* =========================================================
+   1. COMMON / RESET
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* =========================================================
+   2. HEADER
+   ========================================================= */
+header {
+    background: linear-gradient(90deg, #ff9933, #ffffff, #138808);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+header h1 {
+    font-size: 38px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* =========================================================
+   3. MAIN NAVIGATION
+   ========================================================= */
+.main-nav {
+    background: #222;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 5px solid #ffd700;
+    display: flex;
+    border-radius: 2px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.main-nav .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: .3s;
+    padding: 15px 20px;
+    margin: 0 5px;
+}
+
+.main-nav a:hover {
+    background-color: #ffd700;
+    color: #222;
+    border-radius: 7px;
+}
+
+/* =========================================================
+   4. NAVIGATION RIGHT SIDE
+   ========================================================= */
+.nav-right {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    z-index: 100;
+}
+
+.nav-icon-btn,
+.menu-btn {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   5. DARK MODE BUTTON
+   ========================================================= */
+#darkBtn {
+    background: linear-gradient(135deg, #ffffff, #f1f5f9);
+    color: #1e293b;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 50%;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#darkBtn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* =========================================================
+   6. TRANSLATE BUTTON
+   ========================================================= */
+#translateBtn {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+/* =========================================================
+   7. THREE LINE MENU BUTTON
+   ========================================================= */
+.menu-btn {
+    display: block !important;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    font-size: 22px;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    padding: 5px 10px;
+}
+
+.nav-icon-btn:hover,
+.menu-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* =========================================================
+   8. MOBILE / SIDE MENU
+   ========================================================= */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 230px;
+    max-width: 80vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: 0.4s ease-in-out;
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ffffff55;
+    display: block;
+}
+
+.mobile-menu a:hover {
+    background: #388e3c;
+}
+
+/* =========================================================
+   9. SUBMENU
+   ========================================================= */
+.submenu-container {
+    width: 100%;
+}
+
+.submenu {
+    display: none;
+    background: rgba(0, 0, 0, 0.95);
+    padding-left: 15px;
+}
+
+.submenu a {
+    font-size: 16px;
+    color: #ffffff;
+    border-bottom: none;
+    display: block;
+}
+
+.arrow {
+    float: right;
+    font-size: 24px;
+    color: rgb(252, 3, 3);
+    transition: transform 0.3s ease;
+}
+
+.submenu-container.active .arrow {
+    transform: rotate(180deg);
+}
+
+.submenu a:hover {
+    background: #0a428b;
+    border-radius: 5%;
+}
+
+.submenu-container.active .submenu {
+    display: block;
+}
+
+/* =========================================================
+   10. CLOSE BUTTON
+   ========================================================= */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #ffd700;
+}
+
+/* =========================================================
+   11. HERO SECTION
+   ========================================================= */
+.hero {
+    height: 500px;
+    background: url("vill.jpeg") center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, .6);
+    padding: 30px;
+    border-radius: 25px;
+    color: white;
+    max-width: 700px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   12. COMMON SECTION
+   ========================================================= */
+.section {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 0 60px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #d35400;
+    margin-bottom: 25px;
+}
+
+.section p {
+    font-size: 19px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* =========================================================
+   13. IMAGE SLIDER
+   ========================================================= */
+.slider {
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+}
+
+.slider img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* =========================================================
+   14. HISTORY BOX (Fixed Width & Spacing)
+   ========================================================= */
+.history-box {
+    background: #ffffff;
+    padding: 35px;
+    width: 95%;
+    max-width: 1300px;
+    min-width: 280px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin: 30px auto;
+}
+
+.history-box h2 {
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.history-box h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #1207d4, #ec4899);
+    border-radius: 2px;
+}
+
+.history-box p {
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+    font-size: 19px;
+    line-height: 1.9;
+    color: #01070f;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.history-box h2:hover {
+    color: #05a4ee;
+}
+
+
+/* =========================================================
+   See More Button Style 
+   ========================================================= */
+#seeMore {
+    color: rgb(27, 247, 2);
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#seeMore:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* =========================================================
+   15. FESTIVAL CARDS
+   ========================================================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    border: 1px solid #f1f5f9;
+}
+
+.card-link:hover .card,
+.card-link:active .card {
+    transform: scale(0.98);
+    box-shadow: 0 10px 15px rgba(1, 248, 34, 0.792);
+    border-color: #fc0202;
+}
+
+.card h3,
+.card h4,
+.card h5 {
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #5e34f3, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card p {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.6;
+    text-align: center !important;
+}
+
+/* =========================================================
+   16. PHOTO GALLERY
+   ========================================================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.photo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transition: .4s;
+}
+
+.photo img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================================================
+   17. GOOGLE MAP
+   ========================================================= */
+.map {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+}
+
+/* =========================================================
+   18. CONTACT FORM
+   ========================================================= */
+.section#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section#contact input,
+.section#contact textarea {
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 15px;
+    border: 1px solid #f80404;
+    border-radius: 8px;
+    outline: none;
+    color: #00040a;
+}
+
+.section#contact input::placeholder,
+.section#contact textarea::placeholder {
+    color: #000307;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.section#contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.section#contact button {
+    background: #fa02fafa;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 900;
+}
+
+.section#contact input:focus,
+.section#contact textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 3px 3px 1px rgba(10, 20, 31, 0.5);
+}
+
+.section#contact button[type="submit"]:hover {
+    background-color: #087e41;
+}
+
+.section#contact button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* =========================================================
+   19. WHATSAPP BUTTON
+   ========================================================= */
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    z-index: 999;
+}
+
+/* =========================================================
+   20. BACK TO TOP BUTTON
+   ========================================================= */
+#topBtn {
+    position: fixed;
+    left: 17px;
+    top: 95px;
+    display: none;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #ff9800;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
+
+/* =========================================================
+   21. LOADER
+   ========================================================= */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh; 
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(18px, 5vw, 35px);
+    font-weight: bold;
+    white-space: nowrap; 
+    padding: 0 15px; 
+    box-sizing: border-box;
+    z-index: 99999;
+    touch-action: none;
+}
+
+@media (min-width: 768px) {
+    #loader {
+        font-size: 35px;
+    }
+}
+
+/* =========================================================
+   22. GOOGLE TRANSLATE
+   ========================================================= */
+#google_translate_element {
+    display: inline-block;
+    z-index: 1000;
+}
+
+.goog-te-gadget-simple {
+    background: white !important;
+    border: none !important;
+    padding: 7px 6px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+    cursor: pointer;
+}
+
+.goog-te-gadget-simple img {
+    display: inline-block !important;
+    margin: 0 !important;
+}
+
+.goog-te-gadget-simple span {
+    display: none !important;
+}
+
+/* =========================================================
+   23. FOOTER
+   ========================================================= */
+footer {
+    background: #1b1b1b;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    line-height: 1.8;
+    margin-top: 50px;
+}
+
+footer hr {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #555;
+}
+
+footer p {
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+/* =========================================================
+   24. DARK MODE
+   ========================================================= */
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark header {
+    filter: brightness(.9);
+}
+
+body.dark .main-nav {
+    background: #111;
+}
+
+body.dark .history-box {
+    background: #30855a !important;
+}
+
+body.dark .history-box h2 {
+    color: #fcf803 !important;
+}
+
+body.dark .history-box p {
+    color: #faf9f9 !important;
+}
+
+body.dark .card {
+    background: #1e293b !important;
+    border-color: #c8f503 !important;
+}
+
+body.dark .card p {
+    color: #94a3b8 !important;
+}
+
+body.dark .section#contact input,
+body.dark .section#contact textarea {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+    border: 1px solid #555 !important;
+}
+
+body.dark .section#contact input::placeholder,
+body.dark .section#contact textarea::placeholder {
+    color: #cccccc !important;
+}
+
+body.dark footer {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* =========================================================
+   25. MOBILE RESPONSIVE
+   ========================================================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+    }
+
+    .hero {
+        height: 320px;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .slider img {
+        height: 250px;
+    }
+}

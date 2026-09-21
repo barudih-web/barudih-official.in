@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>बारूडीह | आधिकारिक वेबसाइट</title>
+
+<link rel="stylesheet" href="css/css1.css">
+
+
+
+</head>
+
+<body>
+    
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'hi',
+        includedLanguages: 'hi,en,bn,or,ta,te,gu,mr,pa,ur',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<header>
+
+<h1>🌍 बारूडीह 🌍</h1>
+
+<p>ग्राम की आस्था • हमारी संस्कृति • हमारी पहचान</p>
+
+
+</header>
+
+<!-- Normal Navigation -->
+<nav class="main-nav">
+    
+    <!-- 1. यह हिस्सा कंप्यूटर और लैपटॉप पर दिखाई देगा -->
+    <div class="nav-links">
+        <a>Home</a>
+        <a href="#about">About</a>
+        <a href="#religious places">religious places</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <!-- दाहिनी ओर के कंट्रोल्स (डार्क मोड बटन, ट्रांसलेट बटन और 3-लाइन मेनू) -->
+<div class="nav-right">
+    <!-- Dark Mode Button -->
+    <button id="darkBtn" class="nav-icon-btn">🌙</button>
+    
+    <!-- Translate Button -->
+    <div id="google_translate_element"></div>
+    <!-- 3-लाइन वाला मेनू बटन -->
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
+</div>
+
+</nav>
+
+<!-- 3 Line से खुलने वाला Mobile Menu (साइड से आने वाला drawer) -->
+<nav class="mobile-menu" id="mobileMenu">
+    <!-- Close Button -->
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+    
+    <div class="submenu-container">
+            <a href="#" class="menu-item">religious places<span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                        <a href="gram.html" target="_blank">Gram Than</a>
+                <a href="hari.html" target="_blank">Hari Mandir </a>
+                <a href="hanuman.html" target="_blank">Hanuman Mandir </a>
+                <a href="sarswati.html" target="_blank">Sarswati Puja  </a>
+            </div>
+        </div>
+    <a href="contact.html">Contact</a>
+</nav>
+<script>
+// 1. ☰ बटन पर क्लिक करने पर मेनू खुलेगा या बंद होगा
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+// 2. सब-मेनू (About / Religious Places) पर क्लिक इवेंट अब फ़ंक्शन के बाहर है
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.menu-item').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            let container = this.parentElement;
+            container.classList.toggle('active');
+        });
+    });
+});
+</script>
+
+<div class="hero" style="background-image: url('image/vill.jpeg');">
+    <div class="hero-content">
+        <h2>🙏 बारूडीह में आपका स्वागत है 🙏</h2>
+        <p><b>हमारे गाँव की संस्कृति, परंपरा, इतिहास और धार्मिक धरोहर को समर्पित आधिकारिक वेबसाइट।</b></p>
+    </div>
+</div>
+<!-- ================= IMAGE SLIDER ================= -->
+
+
+<section class="section">
+
+    <h2> 1932 का नक्शा</h2>
+
+    <div class="slider">
+
+        <a href="image/naksha (1)_page-0001.jpg" target="_blank">
+            <img src="image/naksha (1)_page-0001.jpg"
+                 alt="Barudih" class="slide active">
+        </a>
+
+        <a href="image/naksha2.jpeg" target="_blank">
+            <img src="image/naksha2.jpeg"
+                 alt="naksha" class="slide">
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <h2>वंशावली </h2>
+
+    <div class="slider">
+        <a href="image/vansawali.jpg" target="_blank"></a>
+        <img id="slide2"
+             src="image/vansawali.jpg"
+             alt="Barudih">
+    </div>
+
+</section>
+<marquee  direction ="left" style="color: red"><b>
+    नोट:-  यदि किसी प्रकार की जानकारी गलत, भ्रामक या अधूरी हो गई हो, 
+    तो कृपया हमें संदेश भेजकर सूचित करें। आपके सुझावों का स्वागत रहेगा।
+ </b></marquee>
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    function showSlide() {
+        slides.forEach(slide => {
+            slide.classList.remove("active");
+        });
+
+        slides[currentSlide].classList.add("active");
+
+        currentSlide++;
+
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
+    }
+
+    setInterval(showSlide, 3000);
+</script>
+
+
+
+<!-- ================= HISTORY ================= 
+
+<section class="section" id="history"> -->
+
+
+
+
+<!-- ================= TEMPLE ================= 
+
+<section class="section">--
+
+<h2>🛕 श्री हरि मंदिर</h2>
+
+<div class="history-box">
+
+<p>
+
+श्री हरि मंदिर पूरे गाँव की आस्था का प्रतीक है।
+यह मंदिर केवल पूजा का स्थान नहीं बल्कि सामाजिक
+एकता और भाईचारे का केंद्र भी है।
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= GRAM DEVTA ================= --
+
+<section class="section"--
+
+<h2>🙏 ग्राम देवता</h2>
+
+<div class="history-box">
+
+<p>
+
+ग्राम देवता को गाँव का रक्षक माना जाता है।
+प्रत्येक शुभ कार्य की शुरुआत ग्राम देवता के आशीर्वाद से
+की जाती है।
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= EVENTS ================= -->
+
+<!-- ================= EVENTS ================= -->
+
+<section class="section" id="religious places">
+
+<h2>प्रमुख धार्मिक स्थल </h2>
+
+<div class="cards">
+
+<!-- कार्ड 1: ग्राम देवता -->
+<a href="gram.html" target="_blank" class="card-link">
+    <div class="card">
+        <h3>ग्राम देवता </h3>
+    </div>
+</a>
+
+<!-- कार्ड 2: हरि मंदिर -->
+<a href="hari.html" target="_blank" class="card-link">
+    <div class="card">
+        <h4>🎶 हरि मन्दिर</h4>
+    </div>
+</a>
+
+<!-- कार्ड 3: हनुमान जयंती -->
+<a href="hanuman.html" target="_blank" class="card-link">
+    <div class="card">
+        <h5>हनुमान मन्दिर </h5>
+    </div>
+</a>
+<!-- कार्ड 4 : सरस्वती पूजा -->
+<a href="sarswati.html" target="_blank" class="card-link">
+    <div class="card">
+        <h3>सरस्वती पूजा</h3>
+    </div>
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= PHOTO GALLERY ================= --
+
+<section class="section" id="gallery">
+
+<h2>📸 फोटो गैलरी</h2>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="images/hari-mandir.jpg" alt="श्री हरि मंदिर">
+</div>
+
+<div class="photo">
+<img src="images/gram-devta.jpg" alt="ग्राम देवता">
+</div>
+
+<div class="photo">
+<img src="images/hanuman.jpg" alt="हनुमान मंदिर">
+</div>
+
+<div class="photo">
+<img src="images/barudih1.jpg" alt="बारूडीह गाँव">
+</div>
+
+<div class="photo">
+<img src="images/barudih2.jpg" alt="बारूडीह गाँव">
+</div>
+
+<div class="photo">
+<img src="images/barudih3.jpg" alt="बारूडीह गाँव">
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GOOGLE MAP ================= -->
+
+<section class="section">
+
+<h2>📍 बारूडीह का स्थान</h2>
+
+<div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14661.765931844782!2d85.72747008315764!3d23.26089432778569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5adba47cef64d%3A0x15950bf15c2b96ff!2sTorang%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1788634093886!5m2!1sen!2sin" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section" id="contact">
+
+<h2>📞 संपर्क करें</h2>
+
+<form action="https://formsubmit.co/mahtoanuj965@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://formsubmit.co/thankyou.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="text" name="name" placeholder="आपका नाम" required>
+        <input type="email" name="email" placeholder="ईमेल">
+        <input type="tel" name="phone" placeholder="मोबाइल नंबर" required>
+        <textarea name="message" placeholder="अपना संदेश लिखें..." required></textarea>
+
+        <button type="submit">संदेश भेजें</button>
+</form>
+
+</section>
+
+<!-- ================= WHATSAPP ================= -->
+
+<a href="https://wa.me/7368937144"
+class="whatsapp"
+target="_blank">
+💬
+</a>
+
+
+
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button id="topBtn">⬆</button>
+
+<!-- ================= LOADER ================= -->
+
+<div id="loader">
+
+<h1>🙏 जय गांव  गाराम 🙏</h1>
+
+</div>
+
+
+
+
+
+<script>
+
+/* ================= IMAGE SLIDER ================= */
+
+let images=[
+       "image/group image.jpeg",
+    "image/barad.jpeg",
+    "image/baead1.jpeg",
+    "image/vill1.jpeg",
+    "image/barad2.jpeg",
+    "image/bhidka.jpeg"
+]
+let i=0;
+
+setInterval(function(){
+
+i++;
+
+if(i>=images.length){
+
+i=0;
+
+}
+
+document.getElementById("slide").src=images[i];
+
+},3000);
+
+/* ================= DARK MODE ================= */
+
+document.getElementById("darkBtn").onclick=function(){
+
+document.body.classList.toggle("dark");
+
+};
+
+/* ================= BACK TO TOP ================= */
+
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>200){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+};
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+/* ================= LOADER ================= */
+
+window.onload=function(){
+
+setTimeout(function(){
+
+document.getElementById("loader").style.display="none";
+
+},2000);
+
+};
+
+</script>
+<!-- ================= GOOGLE TRANSLATE ================= --
+
+<div id="google_translate_element"></div>
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'hi',
+        includedLanguages: 'hi,en,bn,or,ta,te,gu,mr,pa,ur',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+
+#google_translate_element{
+position:fixed;
+top:15px;
+right:15px;
+z-index:9999;
+background:white;
+padding:8px;
+border-radius:8px;
+box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+</style>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>🚩 बारूडीह 🚩</h2>
+<!--
+<p><strong>ग्राम बारूडीह, झारखंड</strong></p>
+-->
+<p>
+आस्था • संस्कृति • एकता • विकास
+</p>
+
+<hr>
+
+<p>
+© 2026 बारूडीह। सभी अधिकार सुरक्षित।
+</p>
+
+<p>
+इस वेबसाइट की सामग्री, फोटो एवं डिज़ाइन बिना अनुमति कॉपी करना प्रतिबंधित है।
+</p>
+
+<p>
+💻 Website Designed & Developed by
+<strong>Mahto Anuj Kumar</strong>
+</p>
+
+<p>
+📧 Email : mahtoanuj965@gmail.com
+
+</p>
+
+</footer>
+
+
+
+
+</body>
+</html>
+

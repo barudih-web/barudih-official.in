@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>बारूडीह | आधिकारिक वेबसाइट</title>
+
+<link rel="stylesheet" href="css3.css">
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'hi',
+        includedLanguages: 'hi,en,bn,or,ta,te,gu,mr,pa,ur',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+
+<header>
+    <h1>🌍 बारूडीह 🌍</h1>
+    <p>ग्राम की आस्था • हमारी संस्कृति • हमारी पहचान</p>
+</header>
+
+<!-- Normal Navigation -->
+<nav class="main-nav">
+    <!-- 1. यह हिस्सा कंप्यूटर और लैपटॉप पर दिखाई देगा -->
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#festival">Festival</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <!-- दाहिनी ओर के कंट्रोल्स (डार्क मोड बटन, ट्रांसलेट बटन और 3-लाइन मेनू) -->
+    <div class="nav-right">
+        <!-- Dark Mode Button -->
+        <button id="darkBtn" class="nav-icon-btn">🌙</button>
+        
+        <!-- Translate Button -->
+        <div id="google_translate_element"></div>
+        
+        <!-- 3-लाइन वाला मेनू बटन -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+    </div>
+</nav>
+
+<!-- 3 Line से खुलने वाला Mobile Menu (साइड से आने वाला drawer) -->
+<nav class="mobile-menu" id="mobileMenu">
+    <!-- Close Button -->
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+
+    <a href="index.html">Home</a>
+
+    <!-- Submenu Section (ABOUT) -->
+    <div class="submenu-container">
+        <a href="#" class="menu-item">About <span class="arrow">&#9662;</span></a>
+        <div class="submenu">
+            <a href="about.html"> बारूडीह के बारे</a>
+        </div>
+    </div>
+    
+    <a href="#contact">Contact</a>
+</nav>
+
+<script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.menu-item').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            let container = this.parentElement;
+            container.classList.toggle('active');
+        });
+    });
+});
+</script>
+
+<div class="hero">
+    <div class="hero-content">
+        <h2>🙏 बारूडीह में आपका स्वागत है 🙏</h2>
+        <p>
+        हमारे गाँव की संस्कृति, परंपरा, इतिहास और धार्मिक धरोहर को समर्पित आधिकारिक वेबसाइट।
+        </p>
+    </div>
+</div>
+
+<!-- ================= IMAGE SLIDER ================= -->
+<section class="section">
+    <h2>📸 बारूडीह फोटो गैलरी</h2>
+    <div class="slider">
+        <img id="slide" src="vill.jpeg" alt="Barudih">
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section" id="contact">
+    <h2>📞 संपर्क करें</h2>
+    <p class="intro">
+        बारूडीह गाँव से संबंधित जानकारी, सुझाव या सहयोग के लिए हमसे संपर्क करें।
+    </p>
+
+    <div class="contact-container">
+        <!-- Contact Information -->
+        <div class="contact-box">
+            <h2>📍 संपर्क जानकारी</h2>
+            <div class="contact-info">
+                <p><strong>🏡 गाँव का नाम:</strong> बारूडीह</p>
+                <p><strong>📍 पता:</strong>  गाँव-बारूडीह, पोस्ट - बी . नवाडीह,</p> 
+                                       <p> थाना-राहे, रांची  झारखंड</p>
+            
+                <p><strong>✉️ ईमेल:</strong> <a href="mailto:mahtoanuj965@gmil.com">mahtoanuj965@gmail.com</a></p>
+                <p><strong>🕒 संपर्क समय:</strong> सुबह 9:00 बजे से शाम 6:00 बजे तक</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-box">
+            <h2>✍️ संदेश भेजें</h2>
+            <form action="https://formsubmit.co/mahtoanuj965@gmail.com" method="POST">
+                
+                <!-- FormSubmit Settings -->
+                <input type="hidden" name="_next" value="https://formsubmit.com/thankyou.html">
+                <input type="hidden" name="_captcha" value="false">
+
+                <label for="name">आपका नाम</label>
+                <input type="text" id="name" name="name" placeholder="अपना नाम लिखें" required>
+
+                <label for="email">ईमेल</label>
+                <input type="email" id="email" name="email" placeholder="अपना ईमेल लिखें" required>
+
+                <label for="message">आपका संदेश</label>
+                <textarea id="message" name="message" rows="5" placeholder="अपना संदेश लिखें" required></textarea>
+
+                <button type="submit" class="submit-btn">संदेश भेजें</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ================= EVENTS ================= -->
+<section class="section" id="festival">
+    <h2>प्रमुख धार्मिक स्थान</h2>
+    <div class="cards">
+        <!-- कार्ड 1: ग्राम देवता -->
+        <a href="index.html" class="card-link">
+            <div class="card">
+                <h3>बारूडीह</h3>
+            </div>
+        </a>
+<!-- कार्ड 2: हरि मंदिर -->
+        <a href="gram.html" class="card-link">
+            <div class="card">
+                <h4>ग्राम थान  </h4>
+            </div>
+        </a>
+
+
+        <!-- कार्ड 2: हरि मंदिर -->
+        <a href="hari.html" class="card-link">
+            <div class="card">
+                <h4>हरि मंदिर </h4>
+            </div>
+        </a>
+
+        <!-- कार्ड 3: हनुमान जयंती -->
+        <a href="hanuman.html" class="card-link">
+            <div class="card">
+                <h5>हनुमान मंदिर </h5>
+            </div>
+        </a>
+       
+        <!-- कार्ड 4 : सरस्वती पूजा -->
+        <a href="sarswati.html" class="card-link">
+            <div class="card">
+                <h3>सरस्वती पूजा</h3>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- ================= GOOGLE MAP ================= -->
+<section class="section">
+    <h2>📍 बारूडीह का स्थान</h2>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14661.765931844782!2d85.72747008315764!3d23.26089432778569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5adba47cef64d%3A0x15950bf15c2b96ff!2sTorang%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1788634093886!5m2!1sen!2sin" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+    </div>
+</section>
+
+<!-- ================= WHATSAPP ================= -->
+<a href="https://wa.me/7368937144" class="whatsapp" target="_blank">💬</a>
+
+<!-- ===== BACK TO TOP ================= -->
+<button id="topBtn">⬆</button>
+
+<!-- ================= LOADER ================= -->
+<div id="loader">
+    <h1>🙏 जय श्री हरि 🙏</h1>
+</div>
+
+<script>
+/* ================= IMAGE SLIDER ================= */
+let images = [
+    "vill.jpeg",
+    "barad.jpeg",
+    "vill1.jpeg",
+    "baead1.jpeg"
+];
+let i = 0;
+setInterval(function(){
+    i++;
+    if(i >= images.length){
+        i = 0;
+    }
+    let slideImg = document.getElementById("slide");
+    if(slideImg) slideImg.src = images[i];
+}, 3000);
+
+/* ================= DARK MODE ================= */
+document.getElementById("darkBtn").onclick = function(){
+    document.body.classList.toggle("dark");
+};
+
+/* ================= BACK TO TOP ================= */
+let topBtn = document.getElementById("topBtn");
+window.onscroll = function(){
+    if(document.documentElement.scrollTop > 200){
+        topBtn.style.display = "block";
+    }else{
+        topBtn.style.display = "none";
+    }
+};
+topBtn.onclick = function(){
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
+
+/* ================= LOADER ================= */
+window.onload = function(){
+    setTimeout(function(){
+        let loader = document.getElementById("loader");
+        if(loader) loader.style.display = "none";
+    }, 2000);
+};
+</script>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <h2>🚩 बारूडीह 🚩</h2>
+    <p>आस्था • संस्कृति • एकता • विकास</p>
+    <hr>
+    <p>© 2026 बारूडीह। सभी अधिकार सुरक्षित।</p>
+    <p>इस वेबसाइट की सामग्री, फोटो एवं डिज़ाइन बिना अनुमति कॉपी करना प्रतिबंधित है।</p>
+    <p>💻 Website Designed & Developed by <strong>Mahto Anuj Kumar</strong></p>
+    <p>📧 Email : mahtoanuj965@gmail.com</p>
+</footer>
+
+</body>
+</html>

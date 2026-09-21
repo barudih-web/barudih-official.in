@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>सरस्वती पूजा | बारूडीह</title>
+
+    <link rel="stylesheet" href="css/css.css">
+
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'hi',
+            includedLanguages: 'hi,en,bn,or,ta,te,gu,mr,pa,ur',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+</head>
+<body>
+
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+        <h1>🙏 जय माता दी 🙏</h1>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>🌍 बारूडीह 🌍</h1>
+        <p>ग्राम की आस्था • हमारी संस्कृति • हमारी पहचान</p>
+    </header>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="main-nav">
+        <!-- Desktop Nav Links -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#religious-places">Religious Places</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Right Side Controls -->
+        <div class="nav-right">
+            <button id="darkBtn" class="nav-icon-btn" aria-label="Toggle Dark Mode">🌙</button>
+            <div id="google_translate_element"></div>
+            <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+
+        <a href="index.html">Home</a>
+
+        <!-- Submenu Section: Statement -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">Statement <span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                <a href="2025.html">2025</a>
+                <a href="2026.html">2026</a>
+            </div>
+        </div>
+
+        <!-- Submenu Section: Religious Places -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">Religious Places <span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                <a href="gram.html" target="_blank">Gram Than</a>
+                <a href="hari.html" target="_blank">Hari Mandir</a>
+                <a href="hanuman.html" target="_blank">Hanuman Mandir</a>
+                <a href="sarswati.html" target="_blank">Sarswati Puja</a>
+            </div>
+        </div>
+
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <div class="hero" style="background-image: url('image/vill.jpeg');">
+        <div class="hero-content">
+            <h2>🙏 बारूडीह में आपका स्वागत है 🙏</h2>
+            <p><b>हमारे गाँव की संस्कृति, परंपरा, इतिहास और धार्मिक धरोहर को समर्पित आधिकारिक वेबसाइट।</b></p>
+        </div>
+    </div>
+
+    <!-- ================= IMAGE SLIDER ================= -->
+    <section class="section">
+        <h2>📸 बारूडीह फोटो गैलरी</h2>
+        <div class="slider">
+            <img id="slide" src="image/sarswati1.jpeg" alt="Sarswati Puja Barudih">
+        </div>
+    </section>
+
+    <!-- ================= ABOUT SARSWATI PUJA ================= -->
+    <section class="section history-box" id="about">
+        <h2><span>🏕️</span> सरस्वती पूजा के बारे में</h2>
+
+        <p> 
+        सरस्वती पूजा केवल एक धार्मिक आयोजन नहीं, बल्कि ज्ञान, शिक्षा और सामूहिक उत्साह का सुंदर संगम है। माँ सरस्वती को विद्या, बुद्धि, संगीत और कला की देवी माना जाता है। इसलिए इस दिन गाँव के बच्चों और युवाओं में विशेष उत्साह देखने को मिलता है। ऐसा लगता है मानो पूरा गाँव शिक्षा और संस्कृति के रंग में रंग गया हो।
+        </p>
+        <br>
+        <p>
+        हमारे गाँव की सरस्वती पूजा की सबसे बड़ी विशेषता यहाँ बनाई जाने वाली माँ सरस्वती की प्रतिमा और पंडाल है। हर वर्ष पंडाल को एक नई कल्पना और नए स्वरूप में तैयार करने का प्रयास किया जाता है। इसकी सजावट में स्थानीय युवाओं और कलाकारों की मेहनत साफ दिखाई देती है।
+        पंडाल की बनावट, आकर्षक सजावट, रोशनी और माँ सरस्वती की मनमोहक प्रतिमा लोगों का ध्यान अपनी ओर खींचती है। पंचपरगना क्षेत्र में इस तरह की भव्य प्रतिमा और पंडाल देखने को कम ही मिलता है, इसलिए पूजा के दौरान आसपास के गाँवों के साथ-साथ दूर-दराज के लोग भी इसे देखने के लिए हमारे गाँव आते हैं।
+        <button id="seeMore" onclick="showHistory()" style="margin-left: 10px; cursor: pointer;">और पढ़े...</button>
+        </p>
+
+        <!-- Hidden History Content -->
+        <div id="history" style="display:none;">
+            <br>
+            <p>
+            हमारे गाँव की सरस्वती पूजा के अवसर पर बनाया जाने वाला पंडाल अपनी भव्यता, आकर्षक सजावट और अनोखी कल्पना के कारण विशेष आकर्षण का केंद्र बनता है। पंडाल को सजाने में गाँव के युवाओं की मेहनत, रचनात्मकता और कला-कौशल साफ दिखाई देता है। हर वर्ष पंडाल को एक नए रूप में सजाने का प्रयास किया जाता है, जिससे लोगों में उत्सुकता बनी रहती है कि इस बार माँ सरस्वती का दरबार किस नए अंदाज़ में दिखाई देगा।
+            </p>
+            <br>
+            <p>
+            पंडाल के प्रवेश द्वार से ही उसकी सुंदरता लोगों का ध्यान अपनी ओर खींचने लगती है। रंग-बिरंगे सजावटी सामान, आकर्षक झालरें, चमकती रोशनियाँ और सुंदर कलाकृतियाँ पूरे परिसर को एक अलग ही रूप प्रदान करती हैं। पंडाल के भीतर माँ सरस्वती की प्रतिमा को इस प्रकार सजाया जाता है कि उनका शांत, सौम्य और आशीर्वाद प्रदान करता हुआ स्वरूप पूरे वातावरण को भक्तिमय बना देता है। प्रतिमा के आसपास की सजावट, फूलों की सुंदर व्यवस्था और रोशनी का संयोजन देखने वालों को कुछ देर ठहरकर निहारने के लिए प्रेरित करता है।
+            </p>
+            <br>
+            <p>
+            शाम के समय जब पंडाल की रोशनियाँ जल उठती हैं, तब उसका दृश्य और भी मनमोहक हो जाता है। रंगीन प्रकाश से सजा पंडाल दूर से ही लोगों का ध्यान आकर्षित करता है। बच्चे उत्सुकता के साथ सजावट को देखते हैं, युवा अपने मोबाइल से तस्वीरें लेते हैं और बुजुर्ग भी पंडाल की सुंदरता की प्रशंसा करते हैं। ऐसा लगता है जैसे गाँव का यह पूजा स्थल कुछ समय के लिए कला, प्रकाश और भक्ति का एक सुंदर संसार बन गया हो।
+            </p>
+            <br>
+            <p>
+            हमारे गाँव की सरस्वती पूजा की खासियत केवल पंडाल का बड़ा होना नहीं, बल्कि उसकी अनोखी बनावट, सुंदर सजावट और हर वर्ष कुछ नया प्रस्तुत करने की कोशिश है। पंचपरगना क्षेत्र में इस तरह की भव्य मूर्ति और पंडाल देखने को कम ही मिलता है। यही कारण है कि पूजा के अवसर पर दूर-दूर से लोग विशेष रूप से हमारे गाँव की सरस्वती प्रतिमा और पंडाल देखने के लिए आते हैं।
+            </p>
+            <br>
+            <p>
+            जब बाहर से आए लोग पंडाल की सुंदरता देखकर उसकी प्रशंसा करते हैं, तो गाँव के लोगों को अपनी मेहनत पर गर्व महसूस होता है। यह आयोजन हमें यह भी सिखाता है कि गाँव की कला, कल्पना और सामूहिक मेहनत मिलकर ऐसी सुंदर पहचान बना सकती है, जिसे देखने के लिए लोग दूर-दूर से खिंचे चले आएँ।
+            </p>
+            <br>
+            <p>
+            कहते हैं कि किसी गाँव की पहचान केवल उसकी इमारतों से नहीं, बल्कि वहाँ के लोगों की कल्पना, कला और एकता से बनती है। हमारे गाँव की सरस्वती पूजा इसी पहचान की एक खूबसूरत तस्वीर है—जहाँ माँ सरस्वती के आशीर्वाद के साथ गाँव की प्रतिभा भी अपनी रोशनी बिखेरती है।
+            </p>
+            <br>
+            <button id="seeLess" onclick="hideHistory()" style="display:none; cursor: pointer; padding: 5px 15px;">See Less</button>
+        </div>
+    </section>
+
+    <!-- ================= RELIGIOUS PLACES ================= -->
+    <section class="section" id="religious-places">
+        <h2>प्रमुख धार्मिक स्थल</h2>
+
+        <div class="cards">
+            <!-- कार्ड 1: बारूडीह -->
+            <a href="index.html" class="card-link">
+                <div class="card">
+                    <h3>बारूडीह</h3>
+                </div>
+            </a>
+
+            <!-- कार्ड 2: हरि मंदिर -->
+            <a href="hari.html" class="card-link">
+                <div class="card">
+                    <h4>🎶 हरि मन्दिर</h4>
+                </div>
+            </a>
+
+            <!-- कार्ड 3: हनुमान मंदिर -->
+            <a href="hanuman.html" class="card-link">
+                <div class="card">
+                    <h5>हनुमान मंदिर</h5>
+                </div>
+            </a>
+
+            <!-- कार्ड 4: ग्राम थान -->
+            <a href="gram.html" class="card-link">
+                <div class="card">
+                    <h3>ग्राम थान</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= GOOGLE MAP ================= -->
+    <section class="section">
+        <h2>📍 बारूडीह का स्थान</h2>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14661.765931844782!2d85.72747008315764!3d23.26089432778569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5adba47cef64d%3A0x15950bf15c2b96ff!2sTorang%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1788634093886!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+        <h2>📞 संपर्क करें</h2>
+        <form action="https://formsubmit.co/mahtoanuj965@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://formsubmit.co/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="text" name="name" placeholder="आपका नाम" required>
+            <input type="email" name="email" placeholder="ईमेल">
+            <input type="tel" name="phone" placeholder="मोबाइल नंबर" required>
+            <textarea name="message" placeholder="अपना संदेश लिखें..." required></textarea>
+
+            <button type="submit">संदेश भेजें</button>
+        </form>
+    </section>
+
+    <!-- ================= FLOATING BUTTONS ================= -->
+    <a href="https://wa.me/7368937144" class="whatsapp" target="_blank" aria-label="Contact on WhatsApp">💬</a>
+    <button id="topBtn" aria-label="Scroll to Top">⬆</button>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <h2>🚩 बारूडीह 🚩</h2>
+        <p>आस्था • संस्कृति • एकता • विकास</p>
+        <hr>
+        <p>© 2026 बारूडीह। सभी अधिकार सुरक्षित।</p>
+        <p>इस वेबसाइट की सामग्री, फोटो एवं डिज़ाइन बिना अनुमति कॉपी करना प्रतिबंधित है।</p>
+        <p>💻 Website Designed & Developed by <strong>Mahto Anuj Kumar</strong></p>
+        <p>📧 Email : mahtoanuj965@gmail.com</p>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+    // 1. Toggle Mobile Navigation Menu
+    function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("active");
+    }
+
+    // 2. Mobile Submenu Accordion Handler
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('.menu-item').forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                let container = this.parentElement;
+                container.classList.toggle('active');
+            });
+        });
+    });
+
+    // 3. Read More / See Less Logic
+    function showHistory() {
+        document.getElementById("history").style.display = "block";
+        document.getElementById("seeMore").style.display = "none";
+        document.getElementById("seeLess").style.display = "inline-block";
+    }
+
+    function hideHistory() {
+        document.getElementById("history").style.display = "none";
+        document.getElementById("seeLess").style.display = "none";
+        document.getElementById("seeMore").style.display = "inline-block";
+        document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 4. Automatic Image Slider
+    let images = [
+        "image/sarswati7.png",
+        "image/sarswati1.jpeg",
+        "image/sarswati2.jpeg",
+        "image/sarswati6.png"
+    ];
+
+    let i = 0;
+    setInterval(function(){
+        i = (i + 1) % images.length;
+        let slideImg = document.getElementById("slide");
+        if(slideImg) {
+            slideImg.src = images[i];
+        }
+    }, 3000);
+
+    // 5. Dark Mode Toggle Button
+    let darkBtn = document.getElementById("darkBtn");
+    if(darkBtn) {
+        darkBtn.onclick = function(){
+            document.body.classList.toggle("dark");
+        };
+    }
+
+    // 6. Scroll To Top Button
+    let topBtn = document.getElementById("topBtn");
+    window.onscroll = function(){
+        if(document.documentElement.scrollTop > 200 || document.body.scrollTop > 200){
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    topBtn.onclick = function(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
+    // 7. Hide Page Loader
+    window.onload = function(){
+        setTimeout(function(){
+            let loader = document.getElementById("loader");
+            if(loader) {
+                loader.style.display = "none";
+            }
+        }, 1500);
+    };
+    </script>
+</body>
+</html>

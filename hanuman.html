@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>बारूडीह | आधिकारिक वेबसाइट</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/cssh.css">
+
+    <!-- Google Translate Script -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'hi',
+                includedLanguages: 'hi,en,bn,or,ta,te,gu,mr,pa,ur',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+</head>
+<body>
+
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+        <h1>🙏 जय श्री राम 🙏</h1>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>🌍 बारूडीह 🌍</h1>
+        <p>ग्राम की आस्था • हमारी संस्कृति • हमारी पहचान</p>
+    </header>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="main-nav">
+        <!-- Desktop Links -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#religious-places">Religious Places</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Right Side Controls -->
+        <div class="nav-right">
+            <!-- Dark Mode Button -->
+            <button id="darkBtn" class="nav-icon-btn" aria-label="Toggle Dark Mode">🌙</button>
+            
+            <!-- Translate Dropdown -->
+            <div id="google_translate_element"></div>
+
+            <!-- Hamburger Button -->
+            <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- ================= MOBILE MENU DRAWER ================= -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+
+        <a href="index.html">Home</a>
+
+        <!-- Submenu: About -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">About <span class="arrow">&#9662;</span></a>
+        </div>
+
+        <!-- Submenu: Statement -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">Statement <span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                <a href="#">2025</a>
+                <a href="#">2026</a>
+            </div>
+        </div>
+
+        <!-- Submenu: Religious Places -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">Religious Places <span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                <a href="gram.html" target="_blank">Gram Than</a>
+                <a href="hari.html" target="_blank">Hari Mandir</a>
+                <a href="hanuman.html" target="_blank">Hanuman Mandir</a>
+                <a href="sarswati.html" target="_blank">Sarswati Puja</a>
+            </div>
+        </div>
+
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <div class="hero" style="background-image: url('image/vill.jpeg');">
+        <div class="hero-content">
+            <h2>🙏 बारूडीह में आपका स्वागत है 🙏</h2>
+            <p><b>हमारे गाँव की संस्कृति, परंपरा, इतिहास और धार्मिक धरोहर को समर्पित आधिकारिक वेबसाइट।</b></p>
+        </div>
+    </div>
+
+    <!-- ================= IMAGE SLIDER ================= -->
+    <section class="section">
+        <h2>📸 बारूडीह फोटो गैलरी</h2>
+        <div class="slider">
+            <img id="slide" class="hanuman-img" src="image/hanuman1.jpeg" alt="Barudih Hanuman Mandir" onclick="this.classList.toggle('full-shape')">
+        </div>
+    </section>
+
+    <!-- ================= ABOUT / TEMPLE HISTORY ================= -->
+    <section class="section history-box" id="about">
+        <h2><span>हनुमान मंदिर के बारे</span></h2>
+
+        <p>
+        हनुमान मंदिर गाँव के प्रमुख धार्मिक स्थलों में से एक है। यह मंदिर गाँव के लोगों की आस्था, श्रद्धा और धार्मिक भावना से गहराई से जुड़ा हुआ है। वर्ष 2006 में इस स्थान पर हनुमान जी की प्रतिमा स्थापित की गई थी। प्रतिमा स्थापित होने के बाद धीरे-धीरे गाँव के लोगों की श्रद्धा और विश्वास इस स्थान के प्रति बढ़ता गया।
+        </p>
+        <br>
+        <p>
+        समय के साथ ग्रामीणों की इच्छा हुई कि हनुमान जी के इस पवित्र स्थान पर एक सुंदर मंदिर का निर्माण किया जाए। इसी भावना और सामूहिक सहयोग से वर्ष 2018 में यहाँ मंदिर का निर्माण कराया गया। मंदिर के निर्माण के बाद यह स्थान गाँव के लोगों के लिए पूजा-अर्चना और धार्मिक गतिविधियों का प्रमुख केंद्र बन गया।
+        <button id="seeMore" onclick="showHistory()">और पढ़े...</button>
+        </p>
+
+        <div id="history" style="display:none;">
+            <br>
+            <p>
+            हनुमान जी को शक्ति, साहस, भक्ति, सेवा और संकट से रक्षा करने वाले देवता के रूप में माना जाता है। इसी विश्वास के कारण गाँव के लोग श्रद्धापूर्वक मंदिर में आते हैं और हनुमान जी की पूजा-अर्चना कर उनका आशीर्वाद प्राप्त करते हैं। विशेष अवसरों पर मंदिर में पूजा-पाठ, आरती, भजन-कीर्तन और प्रसाद वितरण जैसे धार्मिक कार्यक्रम भी आयोजित किए जाते हैं।
+            </p>
+            <br>
+            <p>
+            मंदिर केवल पूजा करने का स्थान ही नहीं है, बल्कि यह गाँव की आस्था, एकता और भाईचारे का केंद्र भी है। धार्मिक आयोजनों के समय बच्चे, युवा, महिलाएँ और बुजुर्ग सभी मिल-जुलकर भाग लेते हैं। इससे गाँव के लोगों के बीच आपसी प्रेम, सहयोग और एकता की भावना और मजबूत होती है।
+            </p>
+            <br>
+            <p>
+            2006 में स्थापित हनुमान जी की प्रतिमा और 2018 में निर्मित यह मंदिर आज बारूडीह गाँव की धार्मिक पहचान का एक महत्वपूर्ण हिस्सा है। यहाँ का शांत और भक्तिमय वातावरण श्रद्धालुओं को अपनी ओर आकर्षित करता है और हनुमान जी के प्रति लोगों की आस्था को और मजबूत करता है।
+            </p>
+            <br>
+            <p>
+            हमारे गाँव का हनुमान मंदिर केवल पूजा-पाठ का स्थान नहीं है, बल्कि यह गाँव के लोगों को एक-दूसरे से जोड़ने वाला आस्था और एकता का केंद्र भी है। धार्मिक कार्यक्रमों और विशेष अवसरों पर गाँव के लोग मिल-जुलकर मंदिर की साफ-सफाई, सजावट तथा आयोजन की व्यवस्था करते हैं। हर व्यक्ति अपनी क्षमता के अनुसार सहयोग करता है।
+            </p>
+            <br>
+            <p>
+            मंदिर में होने वाले सामूहिक कार्यक्रमों से गाँव के लोगों में आपसी प्रेम, भाईचारा और सहयोग की भावना मजबूत होती है। यहाँ बच्चे अपनी संस्कृति और धार्मिक परंपराओं को करीब से समझते हैं, जबकि बुजुर्ग अपने अनुभवों और पुरानी परंपराओं को नई पीढ़ी तक पहुँचाते हैं। इस प्रकार मंदिर हमारी परंपराओं को एक पीढ़ी से दूसरी पीढ़ी तक पहुँचाने का माध्यम भी बना हुआ है।
+            </p>
+            <br>
+            <p>
+            मेरे गाँव का हनुमान मंदिर हमारी धार्मिक आस्था, संस्कृति और परंपरा का सुंदर प्रतीक है। मंदिर में प्रवेश करते ही मन में श्रद्धा और शांति का अनुभव होता है। हनुमान जी की भक्ति हमें साहस, सेवा, अनुशासन, निष्ठा और सत्य के मार्ग पर चलने की प्रेरणा देती है।
+            मंदिर की घंटियों की मधुर आवाज, आरती की पवित्र ध्वनि और भक्तों की श्रद्धा मिलकर यहाँ के वातावरण को भक्तिमय बना देती है। यह वातावरण गाँव की धार्मिक परंपराओं को जीवंत बनाए रखता है।
+            <button id="seeLess" onclick="hideHistory()" style="display:none;">See Less</button>
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= RELIGIOUS PLACES ================= -->
+    <section class="section" id="religious-places">
+        <h2>प्रमुख धार्मिक स्थल</h2>
+
+        <div class="cards">
+            <!-- कार्ड 1: बारूडीह -->
+            <a href="index.html" class="card-link">
+                <div class="card">
+                    <h3>बारूडीह</h3>
+                </div>
+            </a>
+
+            <!-- कार्ड 2: ग्राम थान -->
+            <a href="gram.html" target="_blank" class="card-link">
+                <div class="card">
+                    <h4>ग्राम थान</h4>
+                </div>
+            </a>
+
+            <!-- कार्ड 3: हरि मंदिर -->
+            <a href="hari.html" target="_blank" class="card-link">
+                <div class="card">
+                    <h5>हरि मन्दिर</h5>
+                </div>
+            </a>
+
+            <!-- कार्ड 4: सरस्वती पूजा -->
+            <a href="sarswati.html" target="_blank" class="card-link">
+                <div class="card">
+                    <h3>सरस्वती पूजा</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= GOOGLE MAP ================= -->
+    <section class="section">
+        <h2>📍 बारूडीह का स्थान</h2>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14661.765931844782!2d85.72747008315764!3d23.26089432778569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5adba47cef64d%3A0x15950bf15c2b96ff!2sTorang%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1788634093886!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+        <h2>📞 संपर्क करें</h2>
+
+        <form action="https://formsubmit.co/mahtoanuj965@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://formsubmit.co/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="text" name="name" placeholder="आपका नाम" required>
+            <input type="email" name="email" placeholder="ईमेल">
+            <input type="tel" name="phone" placeholder="मोबाइल नंबर" required>
+            <textarea name="message" placeholder="अपना संदेश लिखें..." required></textarea>
+
+            <button type="submit">संदेश भेजें</button>
+        </form>
+    </section>
+
+    <!-- ================= FLOATING BUTTONS ================= -->
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/7368937144" class="whatsapp" target="_blank" aria-label="WhatsApp Contact">💬</a>
+
+    <!-- Back to Top Button -->
+    <button id="topBtn" aria-label="Back to Top">⬆</button>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <h2>🚩 बारूडीह 🚩</h2>
+        <p>आस्था • संस्कृति • एकता • विकास</p>
+        <hr>
+        <p>© 2026 बारूडीह। सभी अधिकार सुरक्षित।</p>
+        <p>इस वेबसाइट की सामग्री, फोटो एवं डिज़ाइन बिना अनुमति कॉपी करना प्रतिबंधित है।</p>
+        <p>💻 Website Designed & Developed by <strong>Mahto Anuj Kumar</strong></p>
+        <p>📧 Email : mahtoanuj965@gmail.com</p>
+    </footer>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        // 1. Mobile Menu Toggle
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("active");
+        }
+
+        // 2. Submenu Dropdown Toggle
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('.menu-item').forEach(function(item) {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let container = this.parentElement;
+                    container.classList.toggle('active');
+                });
+            });
+        });
+
+        // 3. Read More / See Less Logic
+        function showHistory() {
+            document.getElementById("history").style.display = "block";
+            document.getElementById("seeMore").style.display = "none";
+            document.getElementById("seeLess").style.display = "inline-block";
+        }
+
+        function hideHistory() {
+            document.getElementById("history").style.display = "none";
+            document.getElementById("seeLess").style.display = "none";
+            document.getElementById("seeMore").style.display = "inline-block";
+            document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 4. Image Slider Logic
+        let images = [
+            "image/hanuman1.jpeg",
+            "image/hanuman3.jpeg"
+        ];
+        let i = 0;
+        setInterval(function() {
+            i = (i + 1) % images.length;
+            let slideImg = document.getElementById("slide");
+            if (slideImg) {
+                slideImg.src = images[i];
+            }
+        }, 3000);
+
+        // 5. Dark Mode Logic
+        let darkBtn = document.getElementById("darkBtn");
+        if (darkBtn) {
+            darkBtn.onclick = function() {
+                document.body.classList.toggle("dark");
+            };
+        }
+
+        // 6. Back to Top Button Logic
+        let topBtn = document.getElementById("topBtn");
+        window.onscroll = function() {
+            if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+
+        topBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+
+        // 7. Page Loader Logic
+        window.onload = function() {
+            setTimeout(function() {
+                let loader = document.getElementById("loader");
+                if (loader) {
+                    loader.style.display = "none";
+                }
+            }, 1500);
+        };
+    </script>
+</body>
+</html>

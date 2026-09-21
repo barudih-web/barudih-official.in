@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>बारूडीह | आधिकारिक वेबसाइट</title>
+
+    <link rel="stylesheet" href="css/css4.css">
+
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'hi',
+            includedLanguages: 'hi,en,bn,or,ta,te,gu,mr,pa,ur',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+</head>
+<body>
+
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+        <h1>🙏 जय गांव गाराम 🙏</h1>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>🌍 बारूडीह 🌍</h1>
+        <p>ग्राम की आस्था • हमारी संस्कृति • हमारी पहचान</p>
+    </header>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="main-nav">
+        <!-- Desktop Nav -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#religious-places">Religious Places</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Navigation Right Controls -->
+        <div class="nav-right">
+            <button id="darkBtn" class="nav-icon-btn" aria-label="Toggle Dark Mode">🌙</button>
+            <div id="google_translate_element"></div>
+            <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+
+        <a href="index.html">Home</a>
+
+        <!-- Submenu Section (ABOUT) -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">About <span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                <a href="sub 1.html">बारूडीह का नक्शा</a>
+            </div>
+        </div>
+
+        <!-- Submenu Section (RELIGIOUS PLACES) -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">Religious Places <span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                <a href="gram.html" target="_blank">Gram Than</a>
+                <a href="hari.html" target="_blank">Hari Mandir</a>
+                <a href="hanuman.html" target="_blank">Hanuman Mandir</a>
+                <a href="sarswati.html" target="_blank">Sarswati Puja</a>
+            </div>
+        </div>
+
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <div class="hero" style="background-image: url('image/vill.jpeg');">
+        <div class="hero-content">
+            <h2>🙏 बारूडीह में आपका स्वागत है 🙏</h2>
+            <p><b>हमारे गाँव की संस्कृति, परंपरा, इतिहास और धार्मिक धरोहर को समर्पित आधिकारिक वेबसाइट।</b></p>
+        </div>
+    </div>
+
+    <!-- ================= IMAGE SLIDER ================= -->
+    <section class="section">
+        <h2>📸 बारूडीह फोटो गैलरी</h2>
+        <div class="slider">
+            <img id="slide" src="image/vill.jpeg" alt="Barudih Village">
+        </div>
+    </section>
+
+    <!-- ================= ABOUT / HISTORY ================= -->
+    <section class="section history-box" id="about">
+        <h2><span>🏕️</span> बारूडीह के बारे</h2>
+
+        <p>
+        भारत गाँवों का देश है। हमारे गाँवों में प्रकृति की सुंदरता के साथ-साथ अपनी संस्कृति, परंपराएँ और धार्मिक मान्यताएँ भी देखने को मिलती हैं। मेरा गाँव बारूडीह है। मेरा गाँव झारखंड की ग्रामीण संस्कृति और पंचपरगना क्षेत्र की परंपराओं से जुड़ा हुआ है। मुझे अपने गाँव की प्राकृतिक सुंदरता, संस्कृति, त्योहार और यहाँ के लोगों का आपसी प्रेम बहुत पसंद है।
+        </p>
+        <br>
+        <p>
+        मेरे गाँव का वातावरण शांत और प्राकृतिक है। चारों ओर खेत, पेड़-पौधे और हरियाली दिखाई देती है। गाँव के लोग मेहनती और सरल स्वभाव के हैं। यहाँ लोग खेती, मजदूरी, पशुपालन तथा अन्य छोटे-मोटे काम करके अपना जीवन चलाते हैं। गाँव में लोगों के बीच आपसी सहयोग और भाईचारे की भावना देखने को मिलती है। किसी के घर में खुशी का अवसर हो या कोई परेशानी, लोग एक-दूसरे के साथ खड़े रहते हैं।
+        </p>
+        <br>
+        <p>
+        मेरे गाँव की धार्मिक पहचान भी बहुत महत्वपूर्ण है। गाँव में ग्राम देवता, हरि मंदिर और हनुमान मंदिर स्थित है। इन मंदिरों में गाँव के लोगों की गहरी आस्था है। धार्मिक अवसरों पर लोग मंदिरों में पूजा-पाठ करते हैं और गाँव की सुख-शांति की कामना करते हैं। ये मंदिर केवल पूजा के स्थान नहीं हैं, बल्कि गाँव की एकता और संस्कृति से भी जुड़े हुए हैं।
+        </p>
+        <br>
+        <p>
+        मेरे गाँव में सरस्वती पूजा हर साल बड़े उत्साह के साथ मनाई जाती है। इस अवसर पर माँ सरस्वती की प्रतिमा स्थापित की जाती है और पूरे गाँव में उत्सव जैसा माहौल रहता है। बच्चे और युवा पूजा की तैयारी में बढ़-चढ़कर हिस्सा लेते हैं। पूजा के दौरान आसपास के लोगों में भी उत्साह देखने को मिलता है। विशेष बात यह है कि हमारे क्षेत्र में सरस्वती पूजा की यह परंपरा काफी लोकप्रिय है और पूरे पंचपरगना क्षेत्र में भी इसका अपना अलग उत्साह देखने को मिलता है।
+        </p>
+        <br>
+        <p>
+        हमारे गाँव में दीपावली भी बड़े धूमधाम से मनाई जाती है। घरों की साफ-सफाई की जाती है, दीप जलाए जाते हैं और पूरा गाँव रोशनी से जगमगा उठता है। दीपावली के अवसर पर हमारे यहाँ जाहली की भी विशेष परंपरा है। यह हमारे गाँव और क्षेत्र की स्थानीय संस्कृति का एक महत्वपूर्ण हिस्सा है। इस अवसर पर लोगों में विशेष उत्साह रहता है और गाँव का वातावरण खुशी से भर जाता है।
+        </p>
+        <br>
+        <p>
+        मेरे गाँव की एक विशेष सांस्कृतिक पहचान रासलीला है। हमारे गाँव में रासलीला की परंपरा बहुत पुरानी है। जब आसपास के कई गाँवों में रासलीला का आयोजन नहीं होता था, उस समय से हमारे गाँव में इसका आयोजन होता आ रहा है। इसी कारण रासलीला हमारे गाँव की पुरानी और विशेष परंपराओं में शामिल है। आज भी हर वर्ष रासलीला का आयोजन किया जाता है, जिससे गाँव का वातावरण भक्तिमय और उत्सवपूर्ण हो जाता है।
+        </p>
+        <br>
+        <p>
+        इसके साथ ही हमारे गाँव में नर्तकी नाच की परंपरा भी लंबे समय से चली आ रही है। हर वर्ष होने वाले इस आयोजन में ग्रामीण बड़े उत्साह के साथ शामिल होते हैं। गीत, संगीत और नृत्य के माध्यम से गाँव के लोग मनोरंजन के साथ-साथ अपनी लोक-संस्कृति को भी जीवित रखते हैं।
+        </p>
+        <br>
+        <p>
+        झूमर और अन्य लोकनृत्य भी झारखंड की ग्रामीण संस्कृति का महत्वपूर्ण हिस्सा हैं। अवसर के अनुसार लोग सामूहिक रूप से गीत गाते और नृत्य करते हैं। इन परंपराओं से गाँव के लोगों के बीच आपसी मेल-जोल और भाईचारा बढ़ता है। इस प्रकार मेरे गाँव की सांस्कृतिक परंपराएँ केवल मनोरंजन का साधन नहीं हैं, बल्कि वे हमारी पहचान, इतिहास और सांस्कृतिक विरासत को एक पीढ़ी से दूसरी पीढ़ी तक पहुँचाने का माध्यम भी हैं।
+        </p>
+        <br>
+        <p>
+        झारखंड की संस्कृति में प्रकृति, लोकगीत और लोकनृत्य का विशेष महत्व है। हमारे गाँव में भी पारंपरिक गीत-संगीत और नृत्य का अपना महत्व है। करम, सरहुल जैसे पारंपरिक पर्वों के साथ-साथ होली, और 12 मासे 13 त्योहार भी अपनी-अपनी परंपराओं के अनुसार मनाए जाते हैं। त्योहारों के समय लोग अपने व्यस्त जीवन से समय निकालकर एक-दूसरे के साथ खुशियाँ बाँटते हैं।
+        </p>
+        <br>
+        <p>
+        गाँव के बच्चों और युवाओं में खेल-कूद के प्रति भी काफी उत्साह रहता है। क्रिकेट, फुटबॉल, कबड्डी आदि खेल गाँव के मैदानों में खेले जाते हैं। शिक्षा के प्रति भी लोगों की जागरूकता बढ़ रही है। गाँव के बच्चे पढ़-लिखकर अपने भविष्य को बेहतर बनाने का प्रयास कर रहे हैं।
+        </p>
+        <br>
+        <p>
+        हालाँकि गाँव में अभी भी कुछ सुविधाओं की आवश्यकता है। बेहतर स्वास्थ्य सुविधा, रोजगार के अवसर, अच्छी सड़कें और शिक्षा की बेहतर व्यवस्था गाँव के विकास के लिए जरूरी हैं। यदि इन क्षेत्रों में विकास हो, तो हमारे गाँव के लोगों का जीवन और भी अच्छा हो सकता है।
+        </p>
+        <br>
+        <p>
+        मेरा गाँव मेरे लिए केवल एक रहने की जगह नहीं है, बल्कि मेरी पहचान, संस्कृति और भावनाओं से जुड़ा हुआ स्थान है। यहाँ के मंदिर, त्योहार, परंपराएँ, खेत-खलिहान और लोगों का आपसी प्रेम मेरे गाँव को विशेष बनाते हैं। मुझे अपने गाँव की संस्कृति और परंपराओं पर गर्व है। मैं चाहता हूँ कि मेरा गाँव अपनी पुरानी परंपराओं को सँजोते हुए आधुनिक विकास की ओर भी लगातार आगे बढ़े।
+        </p>
+    </section>
+
+    <!-- ================= RELIGIOUS PLACES ================= -->
+    <section class="section" id="religious-places">
+        <h2>प्रमुख धार्मिक स्थल</h2>
+
+        <div class="cards">
+            <!-- कार्ड 1: ग्राम थान -->
+            <a href="gram.html" target="_blank" class="card-link">
+                <div class="card">
+                    <h3>ग्राम थान</h3>
+                </div>
+            </a>
+
+            <!-- कार्ड 2: हरि मंदिर -->
+            <a href="hari.html" target="_blank" class="card-link">
+                <div class="card">
+                    <h4>🎶 हरि मन्दिर</h4>
+                </div>
+            </a>
+
+            <!-- कार्ड 3: हनुमान मंदिर -->
+            <a href="hanuman.html" target="_blank" class="card-link">
+                <div class="card">
+                    <h5>हनुमान मंदिर</h5>
+                </div>
+            </a>
+
+            <!-- कार्ड 4: सरस्वती पूजा -->
+            <a href="sarswati.html" target="_blank" class="card-link">
+                <div class="card">
+                    <h3>सरस्वती पूजा</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= GOOGLE MAP ================= -->
+    <section class="section">
+        <h2>📍 बारूडीह का स्थान</h2>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14661.765931844782!2d85.72747008315764!3d23.26089432778569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5adba47cef64d%3A0x15950bf15c2b96ff!2sTorang%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1788634093886!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+        <h2>📞 संपर्क करें</h2>
+        <form action="https://formsubmit.co/mahtoanuj965@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://formsubmit.co/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="text" name="name" placeholder="आपका नाम" required>
+            <input type="email" name="email" placeholder="ईमेल">
+            <input type="tel" name="phone" placeholder="मोबाइल नंबर" required>
+            <textarea name="message" placeholder="अपना संदेश लिखें..." required></textarea>
+
+            <button type="submit">संदेश भेजें</button>
+        </form>
+    </section>
+
+    <!-- ================= WHATSAPP & TOP BUTTONS ================= -->
+    <a href="https://wa.me/7368937144" class="whatsapp" target="_blank" aria-label="Contact on WhatsApp">💬</a>
+    <button id="topBtn" aria-label="Scroll to Top">⬆</button>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <h2>🚩 बारूडीह 🚩</h2>
+        <p>आस्था • संस्कृति • एकता • विकास</p>
+        <hr>
+        <p>© 2026 बारूडीह। सभी अधिकार सुरक्षित।</p>
+        <p>इस वेबसाइट की सामग्री, फोटो एवं डिज़ाइन बिना अनुमति कॉपी करना प्रतिबंधित है।</p>
+        <p>💻 Website Designed & Developed by <strong>Mahto Anuj Kumar</strong></p>
+        <p>📧 Email : mahtoanuj965@gmail.com</p>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+    // 1. Mobile Menu Toggle
+    function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("active");
+    }
+
+    // 2. Mobile Submenu Toggle
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('.menu-item').forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                let container = this.parentElement;
+                container.classList.toggle('active');
+            });
+        });
+    });
+
+    // 3. Image Slider Logic
+    let images = [
+        "image/vill.jpeg",
+        "image/group image.jpeg",
+        "image/barad.jpeg",
+        "image/baead1.jpeg",
+        "image/vill1.jpeg",
+        "image/barad2.jpeg",
+        "image/bhidka.jpeg"
+    ];
+
+    let i = 0;
+    setInterval(function(){
+        i++;
+        if(i >= images.length){
+            i = 0;
+        }
+        let slideImg = document.getElementById("slide");
+        if(slideImg) {
+            slideImg.src = images[i];
+        }
+    }, 3000);
+
+    // 4. Dark Mode Toggle
+    let darkBtn = document.getElementById("darkBtn");
+    if(darkBtn) {
+        darkBtn.onclick = function(){
+            document.body.classList.toggle("dark");
+        };
+    }
+
+    // 5. Back to Top Button
+    let topBtn = document.getElementById("topBtn");
+    window.onscroll = function(){
+        if(document.documentElement.scrollTop > 200 || document.body.scrollTop > 200){
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    topBtn.onclick = function(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
+    // 6. Loader Timeout
+    window.onload = function(){
+        setTimeout(function(){
+            let loader = document.getElementById("loader");
+            if(loader) {
+                loader.style.display = "none";
+            }
+        }, 2000);
+    };
+    </script>
+</body>
+</html>
