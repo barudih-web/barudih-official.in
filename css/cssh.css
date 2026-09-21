@@ -669,7 +669,8 @@ body.dark {
 }
 
 body.dark header {
-    filter: brightness(.9);
+    background: linear-gradient(90deg, #b35900, #1502504e, #0a4704);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .8);
 }
 
 body.dark .main-nav {
