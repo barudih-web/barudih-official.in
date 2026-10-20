@@ -1,0 +1,3417 @@
+<!DOCTYPE html>
+<html lang="hi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>बारूडीह | आधिकारिक वेबसाइट एवं कुड़मालि लोकगीत संग्रह</title>
+  <style>
+    
+/* =========================================================
+   1. COMMON / RESET
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+:root {
+      --bg-color: #fbf9f4;
+      --card-bg: #ffffff;
+      --text-main: #070707;
+      --text-primary: #7a2712;
+      --text-muted: #0f0f0f;
+      --border-color: #fa9006;
+      --badge-bg: #f3eae0;
+      --chip-active-bg: #7a2712;
+      --chip-active-text: #ffffff;
+      --lyrics-color: #25201d;
+      --shadow: 0 4px 14px rgba(0, 0, 0, 0.50);
+    }
+
+    /* Dark Mode */
+    body.dark-mode {
+      --bg-color: #1e1e1e;
+      --card-bg: #2a2a2a;
+      --text-main: #e6e6e6;
+      --text-primary: #f28b6d;
+      --text-muted: #b0b0b0;
+      --border-color: #444444;
+      --badge-bg: #332622;
+      --chip-active-bg: #a8381b;
+      --lyrics-color: #eeeeee;
+      --shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+body {
+    background: #f5f5f5;
+    color: #080808;
+}
+
+/* =========================================================
+   2. HEADER
+   ========================================================= */
+header {
+    background: linear-gradient(90deg, #ff9933, #ffffff, #138808);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+header h1 {
+    font-size: 38px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* =========================================================
+   3. MAIN NAVIGATION
+   ========================================================= */
+.main-nav {
+    background: #222;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 5px solid #ffd700;
+    display: flex;
+    border-radius: 2px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.main-nav .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: .3s;
+    padding: 15px 20px;
+    margin: 0 5px;
+}
+
+.main-nav a:hover {
+    background-color: #ffd700;
+    color: #222;
+    border-radius: 7px;
+}
+
+/* =========================================================
+   4. NAVIGATION RIGHT SIDE
+   ========================================================= */
+.nav-right {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    z-index: 100;
+}
+
+.nav-icon-btn,
+.menu-btn {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   5. DARK MODE BUTTON
+   ========================================================= */
+#darkBtn {
+    background: linear-gradient(135deg, #ffffff, #f1f5f9);
+    color: #1e293b;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 50%;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#darkBtn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* =========================================================
+   6. TRANSLATE BUTTON
+   ========================================================= */
+#translateBtn {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+/* =========================================================
+   7. THREE LINE MENU BUTTON
+   ========================================================= */
+.menu-btn {
+    display: block !important;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    font-size: 22px;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    padding: 5px 10px;
+}
+
+.nav-icon-btn:hover,
+.menu-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* =========================================================
+   8. MOBILE / SIDE MENU
+   ========================================================= */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 230px;
+    max-width: 80vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: 0.4s ease-in-out;
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ffffff55;
+    display: block;
+}
+
+.mobile-menu a:hover {
+    background: #388e3c;
+}
+
+/* =========================================================
+   9. SUBMENU
+   ========================================================= */
+.submenu-container {
+    width: 100%;
+}
+
+.submenu {
+    display: none;
+    background: rgba(0, 0, 0, 0.95);
+    padding-left: 15px;
+}
+
+.submenu a {
+    font-size: 16px;
+    color: #ffffff;
+    border-bottom: none;
+    display: block;
+}
+
+.arrow {
+    float: right;
+    font-size: 24px;
+    color: rgb(252, 3, 3);
+    transition: transform 0.3s ease;
+}
+
+.submenu-container.active .arrow {
+    transform: rotate(180deg);
+}
+
+.submenu a:hover {
+    background: #0a428b;
+    border-radius: 5%;
+}
+
+.submenu-container.active .submenu {
+    display: block;
+}
+
+/* =========================================================
+   10. CLOSE BUTTON
+   ========================================================= */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #ffd700;
+}
+
+/* =========================================================
+   11. HERO SECTION
+   ========================================================= */
+.hero {
+    height: 500px;
+    background: url("vill.jpeg") center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, .6);
+    padding: 30px;
+    border-radius: 25px;
+    color: white;
+    max-width: 700px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   12. COMMON SECTION
+   ========================================================= */
+.section {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 0 60px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #d35400;
+    margin-bottom: 25px;
+}
+
+.section p {
+    font-size: 19px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* =========================================================
+   13. IMAGE SLIDER
+   ========================================================= */
+.slider {
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+}
+
+.slider img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* =========================================================
+   17. GOOGLE MAP
+   ========================================================= */
+.map {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+}
+
+/* =========================================================
+   18. CONTACT FORM
+   ========================================================= */
+.section#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section#contact input,
+.section#contact textarea {
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 15px;
+    border: 1px solid #f80404;
+    border-radius: 8px;
+    outline: none;
+    color: #00040a;
+}
+
+.section#contact input::placeholder,
+.section#contact textarea::placeholder {
+    color: #000307;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.section#contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.section#contact button {
+    background: #fa02fafa;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 900;
+}
+
+.section#contact input:focus,
+.section#contact textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 3px 3px 1px rgba(10, 20, 31, 0.5);
+}
+
+.section#contact button[type="submit"]:hover {
+    background-color: #087e41;
+}
+
+.section#contact button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* =========================================================
+   19. WHATSAPP BUTTON
+   ========================================================= */
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    z-index: 999;
+}
+
+/* =========================================================
+   20. BACK TO TOP BUTTON
+   ========================================================= */
+#topBtn {
+    position: fixed;
+    left: 1px;
+    bottom: 9px;
+    display: none;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #ff9800;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
+
+/* =========================================================
+   21. LOADER
+   ========================================================= */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh; 
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(18px, 5vw, 35px);
+    font-weight: bold;
+    white-space: nowrap; 
+    padding: 0 15px; 
+    box-sizing: border-box;
+    z-index: 99999;
+    touch-action: none;
+}
+
+@media (min-width: 768px) {
+    #loader {
+        font-size: 35px;
+    }
+}
+
+/* =========================================================
+   22. GOOGLE TRANSLATE
+   ========================================================= */
+#google_translate_element {
+    display: inline-block;
+    z-index: 1000;
+}
+
+.goog-te-gadget-simple {
+    background: white !important;
+    border: none !important;
+    padding: 7px 6px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+    cursor: pointer;
+}
+
+.goog-te-gadget-simple img {
+    display: inline-block !important;
+    margin: 0 !important;
+}
+
+.goog-te-gadget-simple span {
+    display: none !important;
+}
+
+/* =========================================================
+   23. FOOTER
+   ========================================================= */
+footer {
+    background: #1b1b1b;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    line-height: 1.8;
+    margin-top: 50px;
+}
+
+footer hr {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #555;
+}
+
+footer p {
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+/* =========================================================
+   24. DARK MODE
+   ========================================================= */
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark header {
+    background: linear-gradient(90deg, #b35900, #1502504e, #0a4704);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .8);
+}
+
+
+body.dark .main-nav {
+    background: #111;
+}
+
+body.dark .history-box {
+    background: #30855a !important;
+}
+
+body.dark .history-box h2 {
+    color: #fcf803 !important;
+}
+
+body.dark .history-box p {
+    color: #faf9f9 !important;
+}
+
+body.dark .card {
+    background: #1e293b !important;
+    border-color: #c8f503 !important;
+}
+
+body.dark .card p {
+    color: #94a3b8 !important;
+}
+
+body.dark .section#contact input,
+body.dark .section#contact textarea {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+    border: 1px solid #555 !important;
+}
+
+body.dark .section#contact input::placeholder,
+body.dark .section#contact textarea::placeholder {
+    color: #cccccc !important;
+}
+
+body.dark footer {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* =========================================================
+   25. MOBILE RESPONSIVE
+   ========================================================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+    }
+
+    .hero {
+        height: 320px;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+   
+
+
+    /* Copy/select/drag ko rokne ka basic protection (screenshot ko nahi rok sakta) */
+    body {
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+}
+
+/* =========================================================
+   5. DARK MODE BUTTON
+   ========================================================= */
+#darkBtn {
+    background: linear-gradient(135deg, #ffffff, #f1f5f9);
+    color: #1e293b;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 50%;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#darkBtn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* =========================================================
+   6. TRANSLATE BUTTON
+   ========================================================= */
+#translateBtn {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+/* =========================================================
+   7. THREE LINE MENU BUTTON
+   ========================================================= */
+.menu-btn {
+    display: block !important;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    font-size: 22px;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    padding: 5px 10px;
+}
+
+.nav-icon-btn:hover,
+.menu-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* =========================================================
+   11. HERO SECTION
+   ========================================================= */
+.hero {
+    height: 500px;
+    background: url("vill.jpeg") center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, .6);
+    padding: 30px;
+    border-radius: 25px;
+    color: white;
+    max-width: 700px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+    input, textarea {
+      -webkit-user-select: text;
+      user-select: text;
+    }
+
+    img {
+      -webkit-user-drag: none;
+      user-select: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 30px 14px;
+      min-height: 100vh;
+      background-color: var(--bg-color);
+      background-image: radial-gradient(
+        rgba(128, 128, 128, 1) 1px,
+        transparent 1px
+      );
+      background-size: 24px 24px;
+      color: var(--text-main);
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 680px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Header */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 17px;
+      margin-bottom: 18px;
+      border-radius: 30px;
+      background: var(--badge-bg);
+      color: var(--text-primary);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .main-title {
+      margin: 0 0 10px;
+      color: var(--text-primary);
+      font-size: clamp(25px, 5vw, 34px);
+      line-height: 1.5;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* Controls */
+    .controls-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .font-controls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+
+    .font-controls button {
+      padding: 3px 5px;
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      font-weight: bold;
+    }
+
+    .btn-theme,
+    .btn-print {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+
+    .print-container {
+      margin-bottom: 24px;
+    }
+
+    /* Search */
+    .search-box {
+      position: sticky; /*  relative; yahan relative se sticky kar diya */
+      top: 60px;        /* navigation bar ke theek neeche rokne ke liye */
+      z-index: 900;     /* taaki scroll hone par content iske peeche rahe */
+      background: var(--bg-color); /* background zaroori hai taaki peeche ka text na dikhe */
+      padding: 10px 0;  /* upar-neeche thodi jagah ke liye */
+      width: 100%;
+      margin-bottom: 18px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 14px 15px 14px 43px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      background: var(--card-bg);
+      color: var(--text-main);
+      outline: none;
+      box-shadow: var(--shadow);
+    }
+
+    .search-box input:focus {
+      border-color: var(--text-primary);
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    /* Category Filters */
+    .filter-chips {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    .chip {
+      padding: 9px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 25px;
+      background: var(--card-bg);
+      color: var(--text-main);
+      font-size: 13px;
+      box-shadow: var(--shadow);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .chip.active {
+      background: var(--chip-active-bg);
+      border-color: var(--chip-active-bg);
+      color: var(--chip-active-text);
+    }
+
+    /* Song Cards */
+    .song-card {
+      width: 100%;
+      margin: 0 0 22px;
+      padding: 30px 30px;
+      border: 1px solid #e97c0e;
+      border-radius: 18px;
+      background: var(--card-bg);
+      color: var(--text-main);
+      text-align: left;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .song-card:hover {
+      box-shadow: 0 8px 10px rgba(20, 160, 27, 1);
+      transform: translateY(-2px);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .number-badge {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--badge-bg);
+      color: var(--text-primary);
+      border: 1px solid #e97c0e;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .meta-info {
+      min-width: 0;
+    }
+
+    .category {
+      display: inline-block;
+      margin-bottom: 5px;
+      color: var(--text-primary);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .card-title {
+      margin: 0;
+      color: var(--text-main);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    .divider {
+      border: 0;
+      border-top: 1px solid #e97c0e;
+      margin: 20px 0;
+    }
+
+    /* Lyrics */
+    .song-body {
+      color: var(--lyrics-color);
+      font-size: var(--lyrics-size, 18px);
+      line-height: 2;
+      overflow-wrap: anywhere;
+    }
+
+    .song-body p {
+      margin: 0;
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      white-space: normal;
+      
+    }
+
+   .antara {
+  display: block;
+  margin: 18px 0 0 20%;
+  padding-left: 12px;
+ 
+}
+
+.antara p {
+  margin: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+
+    /* No Results */
+    .no-results {
+      display: none;
+      width: 100%;
+      padding: 25px 15px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      background: var(--card-bg);
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 10px;
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      .song-card {
+        padding: 17px 13px;
+        border-radius: 15px;
+      }
+
+      .number-badge {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+      }
+
+      .title-group {
+        gap: 9px;
+      }
+
+      .card-title {
+        font-size: 16px;
+      }
+
+      .song-body {
+        line-height: 1.9;
+      }
+
+       .antara {
+    margin: 16px 0 0 5%;
+    padding-left: 10px;
+  }
+    }
+
+    /* Print / Save PDF */
+    @media print {
+      body {
+        padding: 0;
+        background: white;
+        color: black;
+      }
+
+      .controls-row,
+      .print-container,
+      .search-box,
+      .filter-chips,
+      .badge {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100%;
+      }
+
+      .main-title,
+      .subtitle {
+        color: black;
+      }
+
+      .song-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #999;
+        background: white;
+        color: black;
+      }
+
+          .antara {
+        margin: 12px 0 0 10%;
+    }
+      .card-title,
+      .song-body,
+      .song-body p {
+        color: black;
+      }
+    }
+  
+
+/* =========================================================
+   FINAL FIXES: FULL-WIDTH LAYOUT + MOBILE RESPONSIVENESS
+   ========================================================= */
+html {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: clip;
+}
+
+header,
+.main-nav,
+.hero,
+footer {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+}
+
+header {
+    padding: 20px 12px;
+}
+
+.main-nav {
+    min-height: 55px;
+}
+
+.hero {
+    background-position: center;
+    background-size: cover;
+}
+
+/* Song collection stays readable and centered; footer is moved outside it. */
+main.container {
+    width: min(100% - 24px, 680px);
+    max-width: 680px;
+    margin: 28px auto;
+    padding: 0;
+}
+
+.section {
+    width: min(92%, 1100px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    display: block;
+    box-sizing: border-box;
+    margin-top: 35px;
+    padding: 32px 16px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+footer h2,
+footer p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+footer hr {
+    width: min(80%, 600px);
+    margin: 20px auto;
+}
+
+#google_translate_element {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: clamp(24px, 6vw, 32px);
+        line-height: 1.4;
+    }
+
+    header p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .main-nav {
+        padding: 6px 10px;
+    }
+
+    .hero {
+        height: 320px;
+        min-height: 260px;
+        padding: 18px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 700px;
+        padding: 20px 14px;
+    }
+
+    .hero-content h2 {
+        font-size: clamp(22px, 5.5vw, 28px);
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    main.container {
+        width: calc(100% - 20px);
+        margin: 20px auto;
+    }
+
+    .section {
+        width: calc(100% - 28px);
+    }
+
+    .section h2 {
+        font-size: clamp(23px, 5vw, 30px);
+    }
+
+    .slider img {
+        height: auto;
+        min-height: 220px;
+        max-height: 500px;
+        object-fit: contain;
+    }
+
+    footer {
+        padding: 25px 12px;
+    }
+
+    footer p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-right {
+        gap: 7px;
+    }
+
+    .hero {
+        height: 290px;
+    }
+
+    .song-card {
+        width: 100%;
+    }
+
+    .whatsapp {
+        width: 50px;
+        height: 50px;
+        right: 12px;
+        bottom: 12px;
+        font-size: 27px;
+    }
+}
+
+  </style>
+ 
+     <!-- Google Translate Script -->
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'hi',
+            includedLanguages: 'hi,en,bn,or,ta,te,gu,mr,pa,ur',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+</head>
+
+<body>
+
+    <!-- ================= LOADER ================= -->
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>🌍 बारूडीह 🌍</h1>
+        <p>ग्राम की आस्था • हमारी संस्कृति • हमारी पहचान</p>
+    </header>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="main-nav">
+        <!-- Desktop Nav Links -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="barudih_ke_bare">About</a>
+            <a href="hari.html">Religious Places</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Controls (Dark Mode, Translate, Menu) -->
+        <div class="nav-right">
+            <button id="darkBtn" class="nav-icon-btn" aria-label="Toggle Dark Mode">🌙</button>
+            <div id="google_translate_element"></div>
+            <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+
+        <a href="index.html">Home</a>
+
+        <!-- Submenu Section (ABOUT) -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">About <span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                <a href="barudih_ke_bare.html" target="_blank">बारूडीह के बारे</a>
+                <a href="sub1.html" target="_blank">बारूडीह का नक्शा</a>
+            </div>
+        </div>
+
+        <!-- Submenu Section (RELIGIOUS PLACES) -->
+        <div class="submenu-container">
+            <a href="#" class="menu-item">Religious Places <span class="arrow">&#9662;</span></a>
+            <div class="submenu">
+                <a href="gram.html" target="_blank">Gram Than</a>
+                <a href="hari.html" target="_blank">Hari Mandir</a>
+                <a href="hanuman.html" target="_blank">Hanuman Mandir</a>
+                <a href="sarswati.html" target="_blank">Sarswati Puja</a>
+            </div>
+        </div>
+
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <div class="hero" style="background-image: url('image/vill.jpeg');">
+        <div class="hero-content">
+            <h2>🙏 बारूडीह में आपका स्वागत है 🙏</h2>
+            <p><b>हमारे गाँव की संस्कृति, परंपरा, इतिहास और धार्मिक धरोहर को समर्पित आधिकारिक वेबसाइट।</b></p>
+        </div>
+    </div>
+    
+ 
+
+  <main class="container">
+   <div class="badge">
+    <span>
+     &starf;
+    </span>
+    कुड़मालि लोक-संस्कृति एवं परब परंपरा
+   </div>
+   <h1 class="main-title">
+    कुड़मालि लोकगीत संग्रह
+   </h1>
+   <p class="subtitle">
+    जाहलिगीत &bull; सोहराय / बाँधना परब &bull; बारद भिड़का गीत गीत &bull; डहरउआ झूमर
+   </p>
+   <!-- Font and Theme Controls -->
+   <div class="controls-row">
+    <div class="card font-controls">
+     <span>
+      अक्षर आकार:
+     </span>
+     <button aria-label="अक्षर छोटा करें" id="btn-decrease" type="button">
+      A&minus;
+     </button>
+     <button aria-label="अक्षर सामान्य करें" id="btn-reset" type="button">
+      A
+     </button>
+     <button aria-label="अक्षर बड़ा करें" id="btn-increase" type="button">
+      A+
+     </button>
+    </div>
+    <button aria-pressed="false" class="card btn-theme" id="btn-dark-mode" type="button">
+     <span id="theme-icon">
+      ☾
+     </span>
+     <span id="theme-text">
+      डार्क मोड
+     </span>
+    </button>
+   </div>
+   <!-- Search -->
+   <div class="search-box">
+    <span class="search-icon">
+     🔍
+    </span>
+    <input aria-label="लोकगीत खोजें" id="search-input" placeholder="गीत का नाम या कोई पंक्ति खोजें..." type="search"/>
+   </div>
+   <!-- Category Filters -->
+   <div aria-label="गीत की श्रेणी चुनें" class="filter-chips">
+    <button aria-pressed="true" class="chip active" data-filter="all">
+     सभी गीत (0)
+    </button>
+    <button aria-pressed="false" class="chip" data-filter="jahli">
+     जाहलिगीत (0)
+    </button>
+    <button aria-pressed="false" class="chip" data-filter="barad-bhidka">
+     बरद भिड़का गीत (0)
+    </button>
+    <button aria-pressed="false" class="chip" data-filter="daharua">
+     डहरउआ गीत (0)
+    </button>
+   </div>
+   <!-- Song 1 -->
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       1
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+         वंदना
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      टालअ उपरे टालअ मंडप बनावलि,
+      <br/>
+      केहु त' करे आवादान रे।
+      <br/>
+      केहु मांगे अनअ-धनअ, केहु मागे पुत्र ह,
+      <br/>
+      केहु मागे भँइसिबाथान रे।।
+     </p>
+     <div class="antara">
+      <p>
+       टालअ उपरे टालअ मंडप बनावलि,
+       <br/>
+       महादेव त' करे आबादान रे।
+       <br/>
+       दुखि मागे अनअ-धनअ, सुखि मागे पुत्र ह,
+       <br/>
+       आहिरा मागे भँइसि बाथान रे।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       2
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+        खजा खजइते आलि
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      खजा&ndash;खजइते आलि पुछा&ndash;पुछइते आलि,
+      <br/>
+      फालनाका कर घारअ कति दूरो हो ।
+      <br/>
+      आनगा-हिं  आहे बाबा तुलसि का पिंडा ह,
+      <br/>
+      उपरे त' घुरे राजा हाँसा रे।
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       3
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+        गईया जे सेवए चैत बैशाख मास 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      केहु जे सेवए चैत बैसाख मास हो,
+      <br/>
+      केहु तो सेवए आषाढ़ मास रे।
+      <br/>
+      केहु जे सेवए पहिलआ भादरो मास,
+      <br/>
+      डाला लेले फुलो लोहरे जाई रे ।।
+     </p>
+     <div class="antara">
+      <p>
+       गईया जे सेवए चैत बैशाख मास हो,
+       <br/>
+       भैंसी तो सेवए आषाढ़ा मास रे।
+       <br/>
+       बहिन बेटी सेवए पहिलआ भादरो मास,
+       <br/>
+       डाला लेले फुलो लोहरे जाई रे।।
+      </p>
+     </div>
+     <div class="song-body">
+      <p>
+       किया लागिन सेवए चैत बैशाख मास हो,
+       <br/>
+       किया लागिन सेवए आषाढ़ मास रे ।
+       <br/>
+       किया लागिन सेवए पहिलआ भादर मास ,
+       <br/>
+       डाला लेले फुलो लोहरे जाई रे ।।
+      </p>
+     </div>
+     <div class="antara">
+      <p>
+       दुबो लागिन सेवए चैत बैशाख मास हो ,
+       <br/>
+       छापोर लागिन सेवए आषाढ़ मास रे ।
+       <br/>
+       बहिन बेटी सेवए पहिलआ भादर मास ,
+       <br/>
+       डाला लेले फुलो लोहरे जाई रे।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       4
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      देखे लागिन पस अलि लालि-लालि चरइ
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      किआ लागिन पस अलि लालि लालि चरइ ह,
+      <br/>
+      किआ लागिन पस अलि गाइ रे।
+      <br/>
+      किआ लागिन पस अलि  बरदा ह,
+      <br/>
+      कनअ ठिने देबं हुमुचाइ रे।।
+     </p>
+     <div class="antara">
+      <p>
+       देखे लागिन पस अलि लालि-लालि चरइ ह,
+       <br/>
+       दुघअ लागिन पस अलि गाइ रे।
+       <br/>
+       जते लागिन पस अलि बलिमान बरदा ह,
+       <br/>
+       खिलि खेते देबं हुमुचाइ रे।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       5
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+        ऐतिक बड़े नगरे भुलि चलि आवलो
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      ऐतिक बड़े नगरे भुलि चलि आवलो,
+      <br/>
+      आवलो त मरि हेराइ जाइ रे।
+      <br/>
+      बीड़ी  सिगरेट देबबे,
+      <br/>
+      तो सुनबे नावा-नावा गित रे।।
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       6
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+         केहु जे चरए गुड़कि-गुड़कि
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      केहु जे चरए गुड़कि-गुड़कि ह,
+      <br/>
+      केहु त चरे कानअ ठाड़ रे।
+      <br/>
+      केहु जे चरए चमकि-चमकि ह,
+      <br/>
+      केहु त चरे निराधार रे।।
+     </p>
+     <div class="antara">
+      गुड़रि जे चरए गुड़कि-गुड़किह,
+      <br/>
+      खेड़िआ त चरे कानअ ठाड़ रे।
+      <br/>
+      मेजुरा त चरए चमकि-चमकिह,
+      <br/>
+      बाकली त चरए निराधार रे।।
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       7
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+ केहु जे गनए अरूगन-तरूगन      
+ </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      केहु जे गनए अरूगन-तरूगन,
+      <br/>
+      केहु त गने मधुमास रे।
+      <br/>
+      केहुत गनए पानि केरी बुन्दा ह,
+      <br/>
+      केहुत डेगे समुद्र पार रे।।
+     </p>
+     <div class="antara">
+      <p>
+       राम जे गनए अरूगन-तरूगन,
+       <br/>
+       लघु मन त गने मधु मास रे।
+       <br/>
+       सीता जे गनए पानि केरी बुन्दा ह,
+       <br/>
+       हनुमान त डेगे समुद्र पार रे।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       8
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+काकर नाम भाला गागी जमुना       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      काकर नाम भाला गागी जमुना ह,
+      <br/>
+      काकर नाम रइदास रे।
+      <br/>
+      काकर नाम भाला सितल सबद ह,
+      <br/>
+      देन बाबा एकटी बीड़ी रे।।
+     </p>
+     <div class="antara">
+      <p>
+       हुका नाम हेकेइ भाला गागी जमुना ह'
+       <br/>
+       चिलम नाम रइदास रे।
+       <br/>
+       फिका का नाम भाला सितल सबद ह'
+       <br/>
+       देन बाबा एकटी बिङी रे।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       9
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+काहाहिं कादए कुइलि बेसरा       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      काहाहिं कादए कुइलि बेसरा ह' ?
+      <br/>
+      काहाहि कादे लर घास रे ?
+      <br/>
+      काहाहि कादए टुअरा रे टापरा ह'?
+      <br/>
+      ताकर माए न बाप रे ?
+     </p>
+     <div class="antara">
+      <p>
+       बने झाड़े कादए कुइलि बेसरा ह'
+       <br/>
+       बेड़ा भुइए कादे लर घास रे। ,
+       <br/>
+       कुलहिमाझे कादए टुअरा रे टापरा,
+       <br/>
+       ताकर माए न बाप रे।।
+      </p>
+     </div>
+     <p>
+      किआ लागिन कादए कुइलि बेसरा ह,
+      <br/>
+      किआ लागिन कादे लर घास रे।
+      <br/>
+      किआ लागिन कादए टुअरा रे टापरा,
+      <br/>
+      ताकर माए न बाप रे।।
+     </p>
+     <div class="antara">
+      चारा लागिन कादए कुइलि बेसरा ह,
+      <br/>
+      पानि लागिन कादे लर घास रे।
+      <br/>
+      दुध लागिन कादए टुअरा रे टापरा,
+      <br/>
+      ताकर माए न बाप रे।।
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       10
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+काकर बेटा भाला पढ़ुआ पंडित       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      काकर बेटा भाला पढ़ुआ पंडित ह' ?
+      <br/>
+      काकर बेटा दरवार रे ?
+      <br/>
+      काकर बेटा भाला अति बलिमान ह' ?
+      <br/>
+      रगदि चाराए धेनुगाइ रे ?
+     </p>
+     <div class="antara">
+      <p>
+       राजा का बेटा भाला पढ़ुवा पंडित ह'
+       <br/>
+       देवना का बेटा दरवार रे।
+       <br/>
+       अहिरा का बेटा भाला अति बलिमान ह'
+       <br/>
+       रगदि चाराए धेनु गाइ रे।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       11
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      कोनो परबे रितोये मुड़ा मानकी 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      कोनो परबे रितोये मुड़ा मानकी हो,
+      <br/>
+      कोनो परबे रिते रे जुवान रे।
+      <br/>
+      कोनो परबे रितोए गाँवे केरी मइया हो,
+      <br/>
+      डाला लेले फुला लहरे जाई रे।।
+     </p>
+     <div class="antara">
+      <p>
+       दसोंई परबे रितोये मुड़ा मानकी हो,
+       <br/>
+       बान्दना परबे रिते रे जुवान रे।
+       <br/>
+       करम परबे रितोए गांवे केरी मइया हो,
+       <br/>
+       डाला लेले फुला लहरे जाई रे।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       12
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      माएं मरले भाला टुअरा रे टापरा 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      केहु मरले भाला टुअरा रे टापरा ह,
+      <br/>
+      केहु सरल कुवंर रे।
+      <br/>
+      केहु मरले भाला बाहिबलो टुटए,
+      <br/>
+      केहु मरले दुनिया आनधार रे।।
+     </p>
+     <div class="antara">
+      माएं मरले भाला टुअरा रे टापरा ह,
+      <br/>
+      बाप मरले रे कुंवर रे।
+      <br/>
+      भाइअ मरले भाला बाहिबलो टुटए,
+      <br/>
+      पुता मरले दुनिया आनधार रे।।
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       13
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+काहाँहि गरजल बाघ बाघिनि       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      काहाँहि गरजल बाघ बाघिनि ह,
+      <br/>
+      काहाँहि गरजल  गइया रे।
+      <br/>
+      काहाँहि गरजल  राजा का बेटा ह,
+      <br/>
+      थर-थर कापत संसार रे।।
+     </p>
+     <div class="antara">
+      <p>
+       बिजुबने गरजए बाघ बाघिनि रे,
+       <br/>
+       बेड़ा भुइए गरजए गइया रे।
+       <br/>
+       कुल्ली मुड़ा गरजए राजा का बेटा रे,
+       <br/>
+       थर-थर कापत संसार रे।।
+      </p>
+     </div>
+     <p>
+      किया लागिन गरजए बाघ बाघिनि ह'
+      <br/>
+      किया लागिन गरजए गइया रे।
+      <br/>
+      किया लागिन गरजए राजा का बेटा ह'
+      <br/>
+      थर-थर कापत संसार रे।।
+     </p>
+     <div class="antara">
+      <p>
+       चारा लागिन गरजए बाघ बाघिनि ह'
+       <br/>
+       बाछुर लागिन गरजाए गइया रे। '
+       <br/>
+       माल लागिन गरजए राजा का बेटा ह'
+       <br/>
+       थर-थर कापत संसार रे।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       14
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+सुतल कुकुर समान       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      दिया जे बरए भाका चु&ndash;न&ndash;भुकचु,
+      <br/>
+      मानवा का साड़ा नहिपाइ रे।
+      <br/>
+      आगु जे जागए गज मति गइआ रे,
+      <br/>
+      ताकर पेछु जागे रे किसान रे।
+      <br/>
+      टुटल खटिआ फुटलअ भरसि,
+      <br/>
+      सुतल कुकुर समान रे।।
+      <br/>
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       15
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      किआ रसे मातए लर-लर मानवा
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      किआ रसे मातए लर-लर मानवा ह,
+      <br/>
+      किआ घासे पाते धेनु गाइ रे।
+      <br/>
+      किआ रसे मातए बने के भावरा ह,
+      <br/>
+      डाइरे छोड़ि पाते सुधियाई रे।।
+     </p>
+     <div class="antara">
+      रसिमदे मातए लर-लर मानवा ह,
+      <br/>
+      डेंब घासे माते धेनु गाइ रे।
+      <br/>
+      फुल रसे मातए बने के भावरा ह,
+      <br/>
+      डाले छोड़ि पाते सुधियाई रे।।
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       16
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      दस भाइ के देले हानि नहिं पडतउ
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      सभे दिन जे मागे भाट्अ भिखारि ह,
+      <br/>
+      आइजत मागे दस भाइ रे।
+      <br/>
+      दस भाइ के देले हानि नहिं पडतउ,
+      <br/>
+      रहिजातउ जनम जनम नाम रे।।
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       17
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      काहाहि नाभाए देवी दुरगा 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      काहाहि नाभाए देवी दुरगा ह,
+      <br/>
+      काहाहि नाभे धेनु गाइ रे।
+      <br/>
+      कांहाँहि नाभाए केवटा का पुता ह,
+      <br/>
+      दोहे&ndash;दोहे फेंके माहा जाल रे।।
+      <br/>
+     </p>
+     <div class="antara">
+      बने झाड़े नाभाए देवि दुरगा ह,
+      <br/>
+      बेड़ा भुइये नामे धेनु गाइ रे।
+      <br/>
+      मालादहे नाभाए केवटा का पुता ह,
+      <br/>
+      दोहे&ndash;दोहे फेंके माहा जाल रे।।
+      <br/>
+     </div>
+     <p>
+      कबेहिं नाभाए देवी दुरगा ह,
+      <br/>
+      कबेहि नाभाए धेनु गाइ रे।
+      <br/>
+      कबेहिं नाभाए केवटा का पुता ह,
+      <br/>
+      दोहे&ndash;दोहे फेंके माहा जाल रे।।
+      <br/>
+     </p>
+     <div class="antara">
+      आसिनेहिं नाभाए देवि दुरगा ह,
+      <br/>
+      कार्तिके नाभाए धेनु गाइ रे।
+      <br/>
+      जेठेहि नाभाए केवटा का पुता ह,
+      <br/>
+      दोहे&ndash;दोहे फेंके माहा जाल रे।।
+      <br/>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       18
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      काकर साड़ो भाला गरजिगेल 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      काकर साड़ो भाला गरजिगेल ?
+      <br/>
+      काकर घोड़ा रिरिआइ रे ?
+      <br/>
+      काकर बरदा भाला उमकि गेल ?
+      <br/>
+      कन ठिन करे छकछुन रे ?
+      <br/>
+     </p>
+     <div class="antara">
+      <p>
+       राजाका साङो भाला गरजिगेल,
+       <br/>
+       देवान का घोड़ा रिरिआरइ रे।
+       <br/>
+       अहिरा का बरदा भाला उमकि गेल,
+       <br/>
+       गाढ़ा दोड़हा करे छकछुन रे।।
+       <br/>
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       19
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      केवटा पुता माछो मारे जाई 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      रिमि झिमि  रिमि झिमि पानी बरसी गेल,
+      <br/>
+      केवटा पुता माछो मारे जाई रे।
+      <br/>
+      माछो मारइते केवटा डुबए,
+      <br/>
+      पीठे पड़ल महाजाल रे ।।
+      <br/>
+     </p>
+     <div class="antara">
+      <p>
+       केहु जे कांदोउ केवटा जनम जनम हो ,
+       <br/>
+       केहु तो कांदे छोयो मासो रे
+       <br/>
+       । 
+केहु जे कांदोउ केवटा डेढ पहर राती ,
+       <br/>
+       भिनिसारे खोपा चिकीनाई रे ।।
+       <br/>
+      </p>
+     </div>
+     <p>
+      मायो जे कांदोउ केवटा जनम-जनम हो ,
+      <br/>
+      बहिन तो कांदे छोयो मासो रे।
+      <br/>
+      भौजाई जे कांदोउ केवटा डेढ पहर राती ,
+      <br/>
+      भिनिसारे खोपा चिकीनाई रे ।।
+      <br/>
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       20
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      किया देखी रे अहिर गइया हेलावले
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      किया देखी रे अहिरआ गइया हेलावले,
+      <br/>
+      किया देखी भैंसी रिदीयाई रे।
+      <br/>
+      किया देखी रे अहिरा बेटी बिहा देवोले,
+      <br/>
+      किया देखी जैतुक दान रे ।।
+     </p>
+     <div class="antara">
+      <p>
+       घासो देखी रे अहिरा गइया रे हेलावले,
+       <br/>
+       बाधो देखी भैंसी रिदीयाई रे
+       <br/>
+       धन देखी रे अहिरा बेटी बिहा देवोले,
+       <br/>
+       पुत्र देखी जैतुक दान रे।
+       <br/>
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       21
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+केंहु जे आनए लता बल पता       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      केंहु जे आनए लता बल पता ह,
+      <br/>
+      केहु त आने कादा लेटा रे।
+      <br/>
+      आर केहु जे आनए माटिके मिरदंगा ह,
+      <br/>
+      कुलहि माझें लह सले जाइ रे।|
+     </p>
+     <div class="antara">
+      <p>
+       आर भैइसि जे आनए लता बल पता ह,
+       <br/>
+       काड़ा त आने कादा लेटा रे।
+       <br/>
+       आर बरअदा जे आनए माटिके मिरदंगा ह,
+       <br/>
+       कुलहि माझें लह सले जाइ रे। ।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       22
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      काकरोअ सिंघ भाला हेकेचा न पेकेचा
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      काकरोअ सिंघ भाला हेकेचा न पेकेचा,
+      <br/>
+      काकरोअ सिंघ छाता डाड़ी रे।
+      <br/>
+      काकरोअ सिंघ भाला कानो तर गुंजरए,
+      <br/>
+      कोकरोअ सिंघ केरिला पुंइयई रे ।
+     </p>
+     <div class="antara">
+      <p>
+       गईया का सिंघ भाला हेकेचा न पेकेचा,
+       <br/>
+       भैंसी का सिंघ छाता डाड़ी रे।
+       <br/>
+       भेड़वा का सिंघ भाला कानो तरे गुंजरए,
+       <br/>
+       बरदा का सिंघ करिल पुंइयई रे।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       23
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      झटअ बेगे करअबे विदाइ 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      ना लागे चइतअ ना लागे बइसाख,
+      <br/>
+      ना लागे पहिल भादर रे।
+      <br/>
+      आजु जे हेके भाइ पहिल अघनअ मास,
+      <br/>
+      झटअ बेगे करअबे विदाइ रे।।
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       24
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      कति दुरे आहे भाला गुरू माए बाप 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      कति दुरे आहे भाला गुरू माए बाप ह,
+      <br/>
+      कति दुरे आहे भाला गुरू भाइ रे।
+      <br/>
+      कति दुरे आहे भाला बांधाना परब ह,
+      <br/>
+      करबो लक्षमिका सेवा रे।।
+     </p>
+     <div class="antara">
+      <p>
+       बड़े गांगा पारे आहे भाला गुरू माए बाप ह,
+       <br/>
+       ताकर पाछे आहे भाला गुरू माए भाइ रे।
+       <br/>
+       ताकर ले उपरे आहे बांधना परब ह,
+       <br/>
+       करबो लक्षमिका सेवा रे।।
+      </p>
+     </div>
+     <p>
+      कइसे के आनब गुरू माए बाप ह,
+      <br/>
+      कइसे के आनब गुरू भाइ रे।
+      <br/>
+      कइसे के आनब बाँधना परब हे,
+      <br/>
+      करबो लक्षमिका सेवा रे।।
+     </p>
+     <div class="antara">
+      <p>
+       डलि पालकि आनब गुरू माए बाप,
+       <br/>
+       हाथि घड़ाएँ आनब भाइ रे।
+       <br/>
+       धुना धुपे आनब बाँधना परब रे,
+       <br/>
+       करबो लक्षमिका सेवा रे।।
+      </p>
+     </div>
+     <p>
+      किआ दिऐ बाधबो गुरू माए बाप रे,
+      <br/>
+      किआ दिऐ बाधबो गुरू भाइ रे।
+      <br/>
+      किआ दिऐ बाधबो बाधना परब रे,
+      <br/>
+      करबो लक्षमिका सेवा रे।।
+     </p>
+     <div class="antara">
+      <p>
+       दुधे भाते बाधबो गुरू माए बाप रे,
+       <br/>
+       दहि चिउराएँ बाधबो गुरू भाइ रे।
+       <br/>
+       खुखड़ी चेनगाएँ बाधबो बाँधना परबह'
+       <br/>
+       करबो लक्षमिका सेवा रे।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       25
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      काहांहि उपजज सालुबल सुगा 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      काहांहि उपजज सालुबल सुगा ह,
+      <br/>
+      काहांहि उपजल धान रे।
+      <br/>
+      काहांहि उपजल चुउखो चँदन ह,
+      <br/>
+      काहांहि उपजल पान रे।।
+     </p>
+     <div class="antara">
+      <p>
+       बने झाड़े सालुबल सुगा ह,
+       <br/>
+       डाड़ि खेते उपजल धान रे
+       <br/>
+       राजा घरे उपजल चुउखो चँदन ह,
+       <br/>
+       पानवार घरे उपजल पान रे।।
+      </p>
+      
+     </div>
+     <p>
+      कइसे चिन्हब सालुबल सुगा रे,
+      <br/>
+      कइसे चिन्हब धान रे?
+      <br/>
+      कइसे चिन्हब चुउखो चंदन ह'?
+      <br/>
+      कइसे चिन्हब पान रे?
+     </p>
+     <div class="antara">
+      
+      उड़इते चिन्हब सालुबल सुगा रे,
+      <br/>
+      कुटइते चिन्हब धान रे।
+      <br/>
+      घसइते चिन्हब चुउखो चनदनअ ह'
+      <br/>
+      थुंकइते चिन्हब पान रे।।
+      <br/>
+     </div>
+    </div>
+   </article>
+
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       26
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+     काकर सिरजल धान 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      काकर सिरजल भुइँयो पिरथिवी ह,<br>
+काकर सिरजल धान रे।<br>
+काकर सिरजल अहिरा ह<br>
+काकर सिरजल गाइ रे।।
+</p>
+
+<div class="antara">
+इसवर का सिरजल भुइँयो पिरथिवी ह,<br>
+महादेव का सिरजल धान रे।<br>
+पारबतिक सिरजल अहिरा ह,<br>
+अहिरा का सिरजल गाइ रे।।
+</div>
+<br>
+<p>
+कन कोनाए आहे भाला धानअ भंडार ह,<br>
+कन कोनाए आहे बाछुरि भंडार रे।<br>
+कन कोनाए आहे भाला घिउए का भंडार ह,<br>
+कन कोनाए आहे दुध का भंडार रे।।
+</p>
+<div class="antara">
+एक कोनाए आहे भाला गाइ भंडार ह,<br>
+एक कोनाए आहे  का बाछुरि भंडार ह|<br>
+राँधा साले आहे भाला घिउए का भंडार ह,<br>
+चुल्हा उपरे आहे दुध के भंडार रे||
+
+     </div>
+    </div>
+   </article>
+
+
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       27
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+      बेटा बिनु दुनियाँ आँधार 
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+काकर लागिन भाला आँगना विरिन्दाबन?<br>
+काकर लागिन दुनिया आँधार रे?<br>
+काकर लागिन भाला छुटल नाइहर ह?<br>
+काकर बिनु टुटल सिंगार रे?
+</p>
+<div class="antara">
+    बेटि बिनु-ह-भाला आँगना बृंदाबन<br>
+बेटा बिनु दुनियाँ आँधार रे।<br>
+माए बिनु-ह-भाला छुटल नाइहर ह,<br>
+सईया बिनु टुटल सिंगार रे।।
+
+     </div>
+    </div>
+   </article>
+
+
+   <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       27
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+     एहे ठिने करबुँ विहान (दुपोहर)
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+टिपकि-टिपकि महुआ गिरए,<br>
+घिसरि घिसरि महुआ बिछे।<br>
+सेह महुआ रस ढंपा देवबे,<br>
+एहे ठिने करबुँ विहान (दुपोहर) रे।।
+
+
+     </div>
+    </div>
+   </article>
+
+  <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       28
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+     एहे ठिने करबुँ विहान (दुपोहर)
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+कौन फूल राते फुले रे भाई,<br> 
+
+कौन फूल दिने फुले?<br>
+
+कौन फूल पानी भीतरे फुले,<br>
+
+कौन फूल दुनिया जोड़े रे।।
+</p>
+<div class="antara">
+तारा फूल राते फुले रे भाई,<br>
+
+सुरुज फूल दिने फुले।<br>
+
+सालुक फूल पानी भीतरे फुले,<br>
+
+पिरीति फूल दुनिया जोड़े रे।।
+
+     </div>
+    </div>
+   </article>
+
+
+     <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       30
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+सेह दिए करत बिदाइ       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+इ घरेक किसानिन बड़े भागिमानि रे,<br>
+अहिरा के देलए रसि मद रे।<br>
+आउर जे देतउ अहिरा आना चाइरेक पएसा,<br>
+सेह दिए करत बिदाइ रे।।
+
+     </div>
+    </div>
+   </article>
+
+
+
+
+     <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       31
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+काँदने त नएना बहे लर      </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+घर से बाहिर भेल दुआरेहिं ठाड़ भेल,<br>
+माने लागल सरग पाताल रे।<br>
+भाबिले गुनिले अंतर पड़ए,<br>
+काँदने त नएना बहे लर रे।।
+
+
+     </div>
+    </div>
+   </article>
+
+
+
+     <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       32
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+कति करि नाचबै       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+कति करि नाचबै कति करि डेगबै,<br>
+कति करि देखबे तमासा रे।<br>
+बेतिं समान डंडा नवतउ,<br>
+जँछियात' भेला समतुल रे।।
+
+
+     </div>
+    </div>
+   </article>
+
+
+
+     <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       33
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+जाएके हेके बड़ी धुर     </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+झट-ह-मट भइआ बिदाइ करहिं,<br>
+जाएके हेके बड़ी धुर रे।<br>
+बछर दिने केरि लक्षमिक का सेवा ह,<br>
+घरे घरे बाजना बाजाइ रे।।
+     </div>
+    </div>
+   </article>
+
+     <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       34
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+भाउजी का काथाँए भइआ चलबे      </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+दादा जे भालां देएके मानत,<br>
+भाउजी मर आँखि ठिरिआइ रे।<br>
+भाउजी का काथाँए भइआ चलबे,<br>
+छुटि जातउ सहदर भाइ रे।।
+
+     </div>
+    </div>
+   </article>
+
+        <article class="song-card" data-category="jahli">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       35
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        जाहलिगीत
+       </span>
+       <h2 class="card-title">
+भाउजी का काथाँए भइआ चलबे      </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+एतना काथा सुनि खिसालएँ भाउजि मर,<br>
+दउड़ि सामालएँ भितर घर रे।<br>
+हाड़काहिं राखल आहे आना चाइरेक पएसा ह,<br>
+खिसे-खिसे देलए निकलाइ रे।।
+
+
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="barad-bhidka">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       1
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        बरद भिड़का गीत
+       </span>
+       <h2 class="card-title">
+बरदा के दुलार और लक्षमिका सेवा       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      आरो दिन जे बरदा मारलो पिटलो<br> 
+आजु त करबो दुलार रे। <br>
+बछर दिनेक बाँधना परब ह' <br>
+करबो लक्षमिका सेवा रे।।
+     </p>
+     <div class="antara">
+      <p>
+       काहांहि लेबे बरदा तेल सिंदुरा ह' <br>
+काहांहि लेबे मेंदुबाइर रे। <br>
+काहांहि लेबे बरदा चुनिके बखार ह' <br>
+खाए देब सहरइ घांस रे।।
+      </p>
+     </div>
+     <p>
+      सिंगेहिं लेबे बरदा तेल सिंदुरा ह' <br>
+माथेहिं लेबे टिकली (भेंदुवाइ) रे <br>
+आठ अंगे लेबे बरदा चुनिके बखार ह' <br>
+खाएंके देब सहरोइ घांस रे।।
+     </p>
+     <div class="antara">
+      <p>
+       कन सिंगे लेबे बरदा तेल सिंदुरा ह' <br>
+कन सिंगे लेबे मेट्ठवाइर रे। <br>
+दाहिन सिंगे लेबे बरदा तेल सिंदुरा ह' <br>
+बाबां सिंगे लेबे मेंदुवाइर रे।।<br>
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="barad-bhidka">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       2
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        बरद भिड़का गीत
+       </span>
+       <h2 class="card-title">
+बरदा के रंग-रूप       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      कन बरन बरदा तहरिका गात ह,
+      <br/>
+      कन बरन तर' सिंग (रे)।
+      <br/>
+      कन बरन बरदा तहरिका आँखिह,
+      <br/>
+      देखब दुनिया दुनयन (रे)।।
+     </p>
+     <div class="antara">
+      <p>
+       रंगिआ बरन बरदा तहरिका गात ह,
+       <br/>
+       सिंदुर बरन तर' सिंग रे।
+       <br/>
+       काजर बरन बरदा तहरिका आँख ह,
+       <br/>
+       देखबे दुनिया दुनयन (रे)।।
+      </p>
+     </div>
+    </div>
+   </article>
+   <article class="song-card" data-category="barad-bhidka">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       3
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        बरद भिड़का गीत
+       </span>
+       <h2 class="card-title">
+ बिजुबने रे अहिरा गइआ चारावबे       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      काहाँहिरे अहिरा गइआ चारावबे,
+      <br/>
+      काहाँहिरे पानिआ पिआइ रे।
+      <br/>
+      काहाँहिरे अहिरा गइआ गठावबे,
+      <br/>
+      काहाँहिरे बंसिआ बलाइ रे।।
+     </p>
+     <div class="antara">
+      <p>
+       बिजुबने रे अहिरा गइआ चारावबे,
+       <br/>
+       भाला दहे पानिआ पिआइ रे।
+       <br/>
+       बउरा तले रे अहिरा गइआ गठावबे
+       <br/>
+       डाइरे चोढ़ि बांसिआ बलाइ रे।।
+      </p>
+     </div>
+     <p>
+      बिजुबने रे अहिरा आगिआ लागाए देबं,
+      <br/>
+      माला दहे महुरा गुराई रे।
+      <br/>
+      बउरा  ह गाछो काटि रे गुचाए देबं
+      <br/>
+      काहा तो बांसिआ बलाइ रे?
+     </p>
+     <div class="antara">
+      बिजुबन रे भाला आगिआ लागाए देवे
+      <br/>
+      माला दहे महुरा गुराई देवे।
+      <br/>
+      बउरा  रे काटि गुचाए देवे
+      <br/>
+      लागि जातउ गइआ के साराप रे।।
+     </div>
+     ना हामे रे भाला आगिआ लागावलि
+ना हामे महुरा गुराई  रे 
+ना हामे काटि के गुचावलि
+कैसे के लगतोऊ गइआ के साराप रे।।
+    </div>
+   </article>
+   <article class="song-card" data-category="barad-bhidka">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       4
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        बरद भिड़का गीत
+       </span>
+       <h2 class="card-title">
+बरदा के गात, सिंग और आँखि       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      कनअ बरन तरअ गातअ रे बरअदा,
+      <br/>
+      कनअ बरन तरअ सिंग रे|
+      <br/>
+      आर कनअ बरन तरअ कानअ रे बरअदा,
+      <br/>
+      कनअ बरन दुइअ आँखिरे।|
+      <p>
+       <div class="antara">
+        <p>
+         बिजलिबरन तरअ गातअ रे बरदा,
+         <br/>
+         हंसुआ बरन तरअ सिंग रे।
+         <br/>
+         सुर्पाल बरन तरअ कानअ रे बरदा,
+         <br/>
+         चाँदअ सुरूज दुइअ आँखिरे।|
+        </p>
+       </div>
+      </p>
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="daharua">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       1
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        डहरउआ गीत
+       </span>
+       <h2 class="card-title">
+        झिंगा लत
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      इ बाड़िक़र झिंगा लत, हाउ बाड़िके जाए|
+      <br/>
+      बड़े घारेक बहु बेटि, झिंगा चराए खाए ||
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="daharua">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       2
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        डहरउआ गीत
+       </span>
+       <h2 class="card-title">
+        छुटु मुटु गुंडरि
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      छुटु मुटु गुंडरिरे भाइ, गुड़गुड़ाले जाए ह |
+      <br/>
+      बांड़दा बुढ़िज कहे किना मरे भातार जाए ह ||
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="daharua">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       3
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        डहरउआ गीत
+       </span>
+       <h2 class="card-title">
+        छाइन कर बांदरा
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      इ छा़इन कर बांदअरा हाउ छा़इन के जाए ह |
+      <br/>
+      छाइने छाइने बांदअरा किना फर के खाए ह||
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="daharua">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       4
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        डहरउआ गीत
+       </span>
+       <h2 class="card-title">
+        केंदलि बाजारे मादलि
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      ए&ndash;दादा&ndash;ए&ndash;दलिहामे जाब केदलि|
+      <br/>
+      केंदलिबाजारे दादा किनदेबं मादलि।।
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="daharua">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       5
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        डहरउआ गीत
+       </span>
+       <h2 class="card-title">
+        माहत घरेक छुआ
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      ढाग&ndash;ढुग लउवा रे भाइ माहत' घरेक छुआ।
+      <br/>
+      से छुआ के लिए गेल एइ धाधाल कउआ।।
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="daharua">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       6
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        डहरउआ गीत
+       </span>
+       <h2 class="card-title">
+        तेलाइए तेल देके
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      इ घरेक लग गिला काहा&ndash;काहा गेला ह'।
+      <br/>
+      तेलाइए तेल देके घधिझाड़े गेला ह'।।
+     </p>
+    </div>
+   </article>
+   <article class="song-card" data-category="daharua">
+    <div class="card-header">
+     <div class="title-group">
+      <div class="number-badge">
+       7
+      </div>
+      <div class="meta-info">
+       <span class="category">
+        डहरउआ गीत
+       </span>
+       <h2 class="card-title">
+        राड़िर हाथे साखा
+       </h2>
+      </div>
+     </div>
+    </div>
+    <hr class="divider"/>
+    <div class="song-body">
+     <p>
+      आम फरे झापा&ndash;झापा तेंतेइर फरे बाका।
+      <br/>
+      पुरूब दिगे जाइए देखिसेत' राड़िर हाथे साखा।।
+     </p>
+    </div>
+   </article>
+   <!-- Search result message -->
+   <div class="no-results" id="no-results" role="status">
+    कोई गीत नहीं मिला। दूसरे शब्द से खोजें।
+   </div>
+  </main>
+
+      <!-- ================= GOOGLE MAP ================= -->
+    <section class="section">
+        <h2>📍 बारूडीह का स्थान</h2>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14661.765931844782!2d85.72747008315764!3d23.26089432778569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5adba47cef64d%3A0x15950bf15c2b96ff!2sTorang%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1788634093886!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+        <h2>📞 संपर्क करें</h2>
+        <form action="https://formsubmit.co/mahtoanuj965@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://formsubmit.co/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="text" name="name" placeholder="आपका नाम" required>
+            <input type="email" name="email" placeholder="ईमेल">
+            <input type="tel" name="phone" placeholder="मोबाइल नंबर" required>
+            <textarea name="message" placeholder="अपना संदेश लिखें..." required></textarea>
+
+            <button type="submit">संदेश भेजें</button>
+        </form>
+    </section>
+
+    <!-- ================= FLOATING BUTTONS ================= -->
+    <a href="https://wa.me/7368937144" class="whatsapp" target="_blank" aria-label="Contact on WhatsApp">💬</a>
+    <button id="topBtn" aria-label="Scroll to Top">⬆</button>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <h2>🚩 बारूडीह 🚩</h2>
+        <p>आस्था • संस्कृति • एकता • विकास</p>
+        <hr>
+        <p>© 2026 बारूडीह। सभी अधिकार सुरक्षित।</p>
+        <p>इस वेबसाइट की सामग्री, फोटो एवं डिज़ाइन बिना अनुमति कॉपी करना प्रतिबंधित है।</p>
+        <p>💻 Website Designed & Developed by <strong>Mahto Anuj Kumar</strong></p>
+        <p>📧 Email : mahtoanuj965@gmail.com</p>
+    </footer>
+
+  <script>
+   (() => {
+  "use strict";
+
+  // Mobile menu and submenu controls.
+  const mobileMenu = document.getElementById("mobileMenu");
+  window.toggleMenu = function () {
+    if (mobileMenu) mobileMenu.classList.toggle("active");
+  };
+  document.querySelectorAll(".submenu-container > .menu-item").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      item.parentElement?.classList.toggle("active");
+    });
+  });
+  mobileMenu?.querySelectorAll("a[href]:not([href='#'])").forEach((link) => {
+    link.addEventListener("click", () => mobileMenu.classList.remove("active"));
+  });
+
+  // Back-to-top button.
+  const topBtn = document.getElementById("topBtn");
+  const updateTopButton = () => {
+    if (topBtn) topBtn.style.display = window.scrollY > 250 ? "block" : "none";
+  };
+  window.addEventListener("scroll", updateTopButton, { passive: true });
+  topBtn?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  updateTopButton();
+
+  // Dark mode: keep both page sections in sync.
+  const navDarkModeBtn = document.getElementById("darkBtn");
+  const darkModeBtn = document.getElementById("btn-dark-mode");
+  const setTheme = (isDark) => {
+    document.body.classList.toggle("dark", isDark);
+    document.body.classList.toggle("dark-mode", isDark);
+    if (navDarkModeBtn) navDarkModeBtn.textContent = isDark ? "☀️" : "🌙";
+    if (darkModeBtn) darkModeBtn.setAttribute("aria-pressed", String(isDark));
+    if (themeIcon) themeIcon.textContent = isDark ? "☀" : "☾";
+    if (themeText) themeText.textContent = isDark ? "लाइट मोड" : "डार्क मोड";
+  };
+  navDarkModeBtn?.addEventListener("click", () => {
+    setTheme(!document.body.classList.contains("dark"));
+  });
+  const themeIcon = document.getElementById("theme-icon");
+  const themeText = document.getElementById("theme-text");
+
+  if (darkModeBtn && themeIcon && themeText) {
+    darkModeBtn.addEventListener("click", () => {
+      setTheme(!document.body.classList.contains("dark-mode"));
+    });
+  }
+
+  // Lyrics font size
+  let lyricsSize = 18;
+  const updateLyricsSize = () => {
+    document.documentElement.style.setProperty("--lyrics-size", `${lyricsSize}px`);
+  };
+
+  document.getElementById("btn-increase")?.addEventListener("click", () => {
+    lyricsSize = Math.min(lyricsSize + 2, 30);
+    updateLyricsSize();
+  });
+  document.getElementById("btn-decrease")?.addEventListener("click", () => {
+    lyricsSize = Math.max(lyricsSize - 2, 12);
+    updateLyricsSize();
+  });
+  document.getElementById("btn-reset")?.addEventListener("click", () => {
+    lyricsSize = 18;
+    updateLyricsSize();
+  });
+
+  // Search and category filters
+  const searchInput = document.getElementById("search-input");
+  const songCards = Array.from(document.querySelectorAll(".song-card"));
+  const filterButtons = Array.from(document.querySelectorAll(".chip"));
+  const noResults = document.getElementById("no-results");
+  let activeFilter = "all";
+
+  const labels = {
+    all: "सभी गीत",
+    jahli: "जाहलिगीत",
+    "barad-bhidka": "बरद भिड़का गीत",
+    daharua: "डहरउआ गीत"
+  };
+
+  function updateCounts() {
+    const counts = { all: songCards.length, jahli: 0, "barad-bhidka": 0, daharua: 0 };
+
+    songCards.forEach((card) => {
+      const category = card.dataset.category;
+      if (Object.prototype.hasOwnProperty.call(counts, category)) counts[category]++;
+    });
+
+    filterButtons.forEach((button) => {
+      const filter = button.dataset.filter;
+      if (labels[filter]) button.textContent = `${labels[filter]} (${counts[filter]})`;
+    });
+  }
+
+  function filterSongs() {
+    const query = searchInput ? searchInput.value.trim().toLocaleLowerCase() : "";
+    let visibleCount = 0;
+
+    songCards.forEach((card) => {
+      const matchesCategory = activeFilter === "all" || card.dataset.category === activeFilter;
+      const matchesSearch = card.textContent.toLocaleLowerCase().includes(query);
+      const visible = matchesCategory && matchesSearch;
+      card.style.display = visible ? "" : "none";
+      if (visible) visibleCount++;
+    });
+
+    if (noResults) noResults.style.display = visibleCount === 0 ? "block" : "none";
+  }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeFilter = button.dataset.filter || "all";
+      filterButtons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      filterSongs();
+    });
+  });
+
+  searchInput?.addEventListener("input", filterSongs);
+
+  // Basic copy/select/context-menu/drag restrictions.
+  // Keep search and form controls usable.
+  const isFormControl = (target) =>
+    target instanceof Element && target.closest("input, textarea, select, [contenteditable='true']");
+
+  document.addEventListener("selectstart", (event) => {
+    if (!isFormControl(event.target)) event.preventDefault();
+  });
+
+  ["copy", "cut"].forEach((eventName) => {
+    document.addEventListener(eventName, (event) => {
+      if (!isFormControl(event.target)) event.preventDefault();
+    });
+  });
+
+  document.addEventListener("contextmenu", (event) => {
+    if (!isFormControl(event.target)) event.preventDefault();
+  });
+
+  document.addEventListener("dragstart", (event) => event.preventDefault());
+
+  document.addEventListener("keydown", (event) => {
+    const key = event.key.toLowerCase();
+    if ((event.ctrlKey || event.metaKey) && ["c", "x"].includes(key) && !isFormControl(event.target)) {
+      event.preventDefault();
+    }
+  });
+
+  updateCounts();
+  filterSongs();
+})();
+  </script>
+ </body>
+</html>
